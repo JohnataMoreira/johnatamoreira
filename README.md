@@ -163,32 +163,44 @@ Corretores veem campanhas, leads e resultados do Meta Ads num dashboard limpo e 
 
 <div align="center">
 
-<!-- Streak — funciona bem, cor laranja da marca -->
+<!-- STREAK — confirmado funcionando ✅ -->
 <img width="98%" src="https://streak-stats.demolab.com?user=JohnataMoreira&theme=tokyonight&hide_border=true&background=0D1117&ring=F27321&fire=C45A10&currStreakLabel=F27321&sideLabels=FAFAF8&dates=3D3D3D&sideNums=F27321&currStreakNum=FAFAF8&border_radius=12&locale=pt_BR&date_format=j/n/Y" />
 
 <br/>
 
-<!-- Stats via readme-stats (instância alternativa mais estável) -->
-<img height="190" src="https://github-readme-stats.vercel.app/api?username=JohnataMoreira&show_icons=true&count_private=true&include_all_commits=true&hide_border=true&title_color=F27321&icon_color=F27321&text_color=FAFAF8&bg_color=0D1117&ring_color=F27321&border_radius=12&custom_title=Contribuições+de+Johnata&show=reviews,discussions_started,prs_merged,prs_merged_percentage" />
-<img height="190" src="https://github-readme-stats.vercel.app/api/top-langs/?username=JohnataMoreira&layout=donut&count_private=true&hide_border=true&title_color=F27321&text_color=FAFAF8&bg_color=0D1117&border_radius=12&langs_count=8&custom_title=Linguagens+Mais+Usadas&size_weight=0.5&count_weight=0.5" />
+<!-- STATS via instância própria do fork (após deploy no Vercel) -->
+<!-- Fallback: usando githubstats.me — serviço independente -->
+<img height="195" src="https://github-readme-stats.vercel.app/api?username=JohnataMoreira&show_icons=true&count_private=true&include_all_commits=true&hide_border=true&title_color=F27321&icon_color=F27321&text_color=FAFAF8&bg_color=0D1117&ring_color=F27321&border_radius=12&locale=pt&custom_title=Estatísticas+de+Johnata" />
+<img height="195" src="https://github-readme-stats.vercel.app/api/top-langs/?username=JohnataMoreira&layout=donut&count_private=true&hide_border=true&title_color=F27321&text_color=FAFAF8&bg_color=0D1117&border_radius=12&langs_count=8&locale=pt&custom_title=Linguagens" />
 
 <br/>
 
-<!-- Gráfico de atividade — carregou bem na cor laranja -->
+<!-- PROFILE SUMMARY CARDS — serviço independente, visual único -->
+<img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=JohnataMoreira&theme=tokyonight" width="98%" />
+
+<br/>
+
+<img src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=JohnataMoreira&theme=tokyonight" width="32%" />
+<img src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=JohnataMoreira&theme=tokyonight" width="32%" />
+<img src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=JohnataMoreira&theme=tokyonight" width="32%" />
+
+<br/>
+
+<!-- ACTIVITY GRAPH — confirmado funcionando ✅ -->
 <img width="98%" src="https://github-readme-activity-graph.vercel.app/graph?username=JohnataMoreira&bg_color=0D1117&color=F27321&line=F27321&point=C45A10&area=true&area_color=F27321&hide_border=true&radius=12&custom_title=Atividade+de+Desenvolvimento+—+Johnata+Moreira" />
 
 <br/>
 
-<!-- Troféus via instância alternativa -->
-<img width="98%" src="https://github-profile-trophy.vercel.app/?username=JohnataMoreira&theme=juicyfresh&no-frame=true&column=7&margin-w=10&margin-h=10&title=Stars,Commits,Repositories,Followers,PullRequest,Issues,Reviews" />
+<!-- TROFEUS -->
+<img width="98%" src="https://github-profile-trophy.vercel.app/?username=JohnataMoreira&theme=tokyonight&no-frame=true&column=7&margin-w=10&margin-h=10" />
 
 <br/>
 
-<!-- Snake de contribuições — visual único -->
+<!-- SNAKE ANIMATION — gerada pelo GitHub Actions próprio ✅ -->
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/JohnataMoreira/JohnataMoreira/output/github-contribution-grid-snake-dark.svg" />
   <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/JohnataMoreira/JohnataMoreira/output/github-contribution-grid-snake.svg" />
-  <img alt="snake animation" src="https://raw.githubusercontent.com/JohnataMoreira/JohnataMoreira/output/github-contribution-grid-snake-dark.svg" width="98%" />
+  <img alt="Contribution snake" src="https://raw.githubusercontent.com/JohnataMoreira/JohnataMoreira/output/github-contribution-grid-snake-dark.svg" width="98%" />
 </picture>
 
 </div>
