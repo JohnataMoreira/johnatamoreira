@@ -11,6 +11,7 @@
 ![Visitors](https://komarev.com/ghpvc/?username=JohnataMoreira&style=for-the-badge&color=F27321&label=VISITANTES)
 [![Site](https://img.shields.io/badge/johnatamoreira.com.br-1A3D6E?style=for-the-badge&logo=googlechrome&logoColor=white)](https://johnatamoreira.com.br)
 [![J&JL](https://img.shields.io/badge/grupojjl.com.br-F27321?style=for-the-badge&logo=firefox&logoColor=white)](https://grupojjl.com.br)
+[![Portfolio](https://img.shields.io/badge/Ver%20Portfólio-1E1E1E?style=for-the-badge&logo=github&logoColor=white)](https://github.com/JohnataMoreira/portfolio)
 
 </div>
 
@@ -20,16 +21,18 @@
 
 ```typescript
 const johnata: Founder = {
-  nome:       "Johnata Moreira",
-  idade:      40,
-  cidade:     "Belo Horizonte, MG",
-  familia:    ["Carol ❤️", "Ester 👧", "Estevão 👦", "Elis 👶"],
-  empresa:    "J&JL Tecnologia da Informação LTDA",
-  missao:     "Financiar o Instituto Jesus Lindão",
-  filosofia:  "Todo ponto de vista é a vista de um ponto.",
-  construindo: ["FrotaOS", "Mishyo", "Fieldoc", "MeuGuia"],
-  stack:      ["React Native", "Next.js", "NestJS", "TypeScript", "Supabase"],
-  credo:      "Tecnologia é meio. Propósito é o fim.",
+  nome:        "Johnata Moreira",
+  idade:       40,
+  cidade:      "Belo Horizonte, MG",
+  familia:     ["Carol ❤️", "Ester 👧", "Estevão 👦", "Elis 👶"],
+  empresa:     "J&JL Tecnologia da Informação LTDA",
+  cnpj:        "68.123.695/0001-32",
+  missao:      "Financiar o Instituto Jesus Lindão",
+  filosofia:   "Todo ponto de vista é a vista de um ponto.",
+  produtos:    ["FrotaOS", "Mishyo", "Fieldoc", "MeuGuia", "InvestImob"],
+  servicos:    ["Tráfego Pago para Corretores", "Sites e Landing Pages"],
+  stack:       ["React Native", "Next.js", "NestJS", "TypeScript", "Supabase"],
+  credo:       "Tecnologia é meio. Propósito é o fim.",
 };
 ```
 
@@ -39,17 +42,18 @@ const johnata: Founder = {
 
 > Empresa pequena. Missão grande.
 
-Desenvolvemos apps, gerenciamos tráfego pago e planejamos tudo com um objetivo que vai além do negócio: **financiar o Instituto Jesus Lindão** — escola e hospital de qualidade para quem não pode pagar.
+Desenvolvemos apps, automatizamos vendas imobiliárias com IA e gerenciamos tráfego pago — tudo com um objetivo que vai além do negócio: **financiar o Instituto Jesus Lindão.**
 
 <div align="center">
 
 [![Ver empresa](https://img.shields.io/badge/Conheça%20a%20J%26JL-grupojjl.com.br-F27321?style=for-the-badge&logo=firefox&logoColor=white)](https://grupojjl.com.br)
+[![Portfólio completo](https://img.shields.io/badge/Portfólio%20Completo-github.com%2FJohnataMoreira%2Fportfolio-1E1E1E?style=for-the-badge&logo=github&logoColor=white)](https://github.com/JohnataMoreira/portfolio)
 
 </div>
 
 ---
 
-## 🚀 Produtos em construção
+## 🚀 Produtos
 
 <table>
 <tr>
@@ -58,11 +62,11 @@ Desenvolvemos apps, gerenciamos tráfego pago e planejamos tudo com um objetivo 
 ### 🚛 FrotaOS
 **Gestão de frotas — Mobile B2B**
 
-App mobile para gestores de frota controlarem veículos, motoristas e manutenções em tempo real.
+App offline-first para gestores controlarem veículos, manutenções e motoristas em tempo real.
 
-`React Native` `Expo` `NestJS` `WatermelonDB`
+`React Native` `Expo Router v3` `NestJS` `WatermelonDB`
 
-![Status](https://img.shields.io/badge/STATUS-Em%20Validação-F27321?style=flat-square)
+![Status](https://img.shields.io/badge/-Em%20Validação-F27321?style=flat-square)
 
 </td>
 <td width="50%" valign="top">
@@ -70,11 +74,11 @@ App mobile para gestores de frota controlarem veículos, motoristas e manutenç�
 ### 👨‍👩‍👧 Mishyo
 **Memórias da família — Mobile**
 
-App para famílias registrarem, organizarem e preservarem memórias juntas — fotos, vídeos, histórias.
+App para famílias preservarem memórias juntas — fotos, vídeos, histórias e linha do tempo.
 
 `React Native` `Expo` `Supabase` `RevenueCat`
 
-![Status](https://img.shields.io/badge/STATUS-Em%20Pausa-1A3D6E?style=flat-square)
+![Status](https://img.shields.io/badge/-Em%20Pausa-1A3D6E?style=flat-square)
 
 </td>
 </tr>
@@ -84,11 +88,11 @@ App para famílias registrarem, organizarem e preservarem memórias juntas — f
 ### 🔍 Fieldoc
 **Inspeções industriais — SaaS**
 
-Plataforma para técnicos de campo e gestores conduzirem inspeções industriais digitais com rastreabilidade total.
+Técnico no campo + gestor no painel. Rastreabilidade total, histórico auditável.
 
 `Next.js` `NestJS` `TypeScript` `Supabase`
 
-![Status](https://img.shields.io/badge/STATUS-Validação-F27321?style=flat-square)
+![Status](https://img.shields.io/badge/-Aguardando%20Gate-F27321?style=flat-square)
 
 </td>
 <td width="50%" valign="top">
@@ -96,11 +100,37 @@ Plataforma para técnicos de campo e gestores conduzirem inspeções industriais
 ### 🗺️ MeuGuia
 **Controle financeiro para motoristas de app**
 
-Ajuda motoristas de Uber, 99 e afins a controlarem ganhos, despesas e a escolherem as melhores corridas.
+Calcula o ganho real por corrida descontando combustível, depreciação e taxas.
 
-`React Native` `TypeScript` `Expo`
+`Flutter` `Dart` `Expo`
 
-![Status](https://img.shields.io/badge/STATUS-Desenvolvimento-1A3D6E?style=flat-square)
+![Status](https://img.shields.io/badge/-Em%20Desenvolvimento-1A3D6E?style=flat-square)
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+
+### 🏠 InvestImob
+**SaaS de automação imobiliária com IA**
+
+Qualifica leads, agenda visitas e libera corretores via WhatsApp + IA. Multi-tenant enterprise.
+
+`NestJS` `Next.js` `React Native` `Gemini` `GPT-4`
+
+![Status](https://img.shields.io/badge/-Fase%2011%20%7C%20Pausado-3D3D3D?style=flat-square)
+
+</td>
+<td width="50%" valign="top">
+
+### 📊 Painel Tráfego
+**Dashboard para corretores de imóveis**
+
+Corretores veem campanhas, leads e resultados do Meta Ads num dashboard limpo e exclusivo.
+
+`Next.js` `Supabase` `Meta Ads API` `Tailwind`
+
+![Status](https://img.shields.io/badge/-Em%20Produção-25D366?style=flat-square)
 
 </td>
 </tr>
@@ -114,14 +144,16 @@ Ajuda motoristas de Uber, 99 e afins a controlarem ganhos, despesas e a escolher
 
 ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
 ![React Native](https://img.shields.io/badge/React%20Native-61DAFB?style=for-the-badge&logo=react&logoColor=black)
+![Flutter](https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white)
 ![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)
 ![NestJS](https://img.shields.io/badge/NestJS-E0234E?style=for-the-badge&logo=nestjs&logoColor=white)
 ![Supabase](https://img.shields.io/badge/Supabase-3ECF8E?style=for-the-badge&logo=supabase&logoColor=black)
 ![Tailwind](https://img.shields.io/badge/Tailwind-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)
 ![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
 ![Expo](https://img.shields.io/badge/Expo-000020?style=for-the-badge&logo=expo&logoColor=white)
-![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)
 ![n8n](https://img.shields.io/badge/n8n-EA4B71?style=for-the-badge&logo=n8n&logoColor=white)
+![Cloudflare](https://img.shields.io/badge/Cloudflare-F38020?style=for-the-badge&logo=cloudflare&logoColor=white)
+![Hetzner](https://img.shields.io/badge/Hetzner-D50000?style=for-the-badge&logo=hetzner&logoColor=white)
 
 </div>
 
@@ -145,11 +177,12 @@ Ajuda motoristas de Uber, 99 e afins a controlarem ganhos, despesas e a escolher
 > *"Um dia, haverá uma escola onde nenhuma criança será excluída por não poder pagar.*
 > *Um hospital onde a dignidade do atendimento não depende do saldo na conta."*
 
-**Meta:** Fundo perpétuo de R$ 2 bilhões. Rendimentos sustentam as operações para sempre.
+**Meta:** Fundo perpétuo de **R$ 2 bilhões**. Os rendimentos sustentam as operações para sempre.
+O fundo pertence à fundação. Não tem herdeiro. Não tem dono. Tem uma missão.
 
-Cada linha de código que escrevo é um tijolo nesse fundo.
+Cada app que construímos é um tijolo nesse fundo.
 
-[![Instituto](https://img.shields.io/badge/Saiba%20mais-Instituto%20Jesus%20Lindão-FFF3E8?style=for-the-badge&labelColor=F27321&color=1E1E1E)](https://grupojjl.com.br/instituto)
+[![Instituto](https://img.shields.io/badge/Saiba%20mais-Instituto%20Jesus%20Lindão-F27321?style=for-the-badge)](https://grupojjl.com.br/instituto)
 
 </div>
 
