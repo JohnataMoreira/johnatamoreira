@@ -163,8 +163,24 @@ Corretores veem campanhas, leads e resultados do Meta Ads num dashboard limpo e 
 
 <div align="center">
 
-<img height="160" src="https://github-readme-stats.vercel.app/api?username=JohnataMoreira&show_icons=true&theme=tokyonight&hide_border=true&title_color=F27321&icon_color=F27321&text_color=FAFAF8&bg_color=1E1E1E&count_private=true"/>
-<img height="160" src="https://github-readme-stats.vercel.app/api/top-langs/?username=JohnataMoreira&layout=compact&theme=tokyonight&hide_border=true&title_color=F27321&text_color=FAFAF8&bg_color=1E1E1E"/>
+<!-- Stats principais + Linguagens -->
+<img height="185" src="https://github-readme-stats.vercel.app/api?username=JohnataMoreira&show_icons=true&count_private=true&include_all_commits=true&theme=tokyonight&hide_border=true&title_color=F27321&icon_color=F27321&text_color=FAFAF8&bg_color=0D1117&ring_color=F27321&border_radius=12" />
+<img height="185" src="https://github-readme-stats.vercel.app/api/top-langs/?username=JohnataMoreira&layout=compact&count_private=true&theme=tokyonight&hide_border=true&title_color=F27321&text_color=FAFAF8&bg_color=0D1117&border_radius=12&langs_count=8" />
+
+<br/>
+
+<!-- Streak de contribuições -->
+<img width="70%" src="https://streak-stats.demolab.com?user=JohnataMoreira&theme=tokyonight&hide_border=true&background=0D1117&ring=F27321&fire=C45A10&currStreakLabel=F27321&sideLabels=FAFAF8&dates=FAFAF8&sideNums=F27321&currStreakNum=FAFAF8&border_radius=12" />
+
+<br/>
+
+<!-- Troféus -->
+<img width="100%" src="https://github-profile-trophy.vercel.app/?username=JohnataMoreira&theme=tokyonight&no-frame=true&no-bg=false&column=7&margin-w=8&margin-h=8&title=Stars,Commits,Repositories,Followers,PullRequest,Issues,Reviews" />
+
+<br/>
+
+<!-- Gráfico de atividade -->
+<img width="100%" src="https://github-readme-activity-graph.vercel.app/graph?username=JohnataMoreira&bg_color=0D1117&color=F27321&line=F27321&point=C45A10&area=true&area_color=F27321&hide_border=true&radius=12&title_color=F27321" />
 
 </div>
 
