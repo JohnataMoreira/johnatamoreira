@@ -1,0 +1,10 @@
+{
+  "name": "johnata-profile-cards",
+  "version": "1.0.0",
+  "description": "Gerador de cards SVG dinâmicos para o perfil GitHub — dados reais dos repos privados + narrativa do Instituto Jesus Lindão",
+  "type": "module",
+  "scripts": {
+    "generate": "node scripts/generate-cards.mjs"
+  },
+  "license": "MIT"
+}

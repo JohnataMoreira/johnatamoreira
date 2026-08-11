@@ -1,0 +1,163 @@
+<svg width="840" height="220" viewBox="0 0 840 220" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="gInst" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#1A3D6E"/>
+      <stop offset="1" stop-color="#F27321"/>
+    </linearGradient>
+    <radialGradient id="gHalo" cx="0.5" cy="0.4" r="0.8">
+      <stop offset="0" stop-color="#FFD700" stop-opacity="0.12"/>
+      <stop offset="1" stop-color="#FFD700" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect x="1.5" y="1.5" width="837" height="217" rx="14"
+        fill="#161B22" stroke="url(#gInst)" stroke-width="2"/>
+  <rect x="2" y="2" width="836" height="216" rx="13" fill="url(#gHalo)"/>
+
+  <!-- título -->
+  <text x="40" y="48" font-family="Georgia,serif" font-size="22" font-weight="700" fill="#FFD700">
+    ⛪ Instituto Jesus Lindão</text>
+  <text x="40" y="74" font-family="Georgia,serif" font-size="13" font-style="italic" fill="#8B949E">
+    "Uma escola onde nenhuma criança é excluída. Um hospital onde a dignidade não depende do saldo."</text>
+
+  <!-- meta -->
+  <text x="800" y="48" text-anchor="end" font-family="'Segoe UI',system-ui,sans-serif"
+        font-size="13" fill="#8B949E">FUNDO PERPÉTUO · META</text>
+  <text x="800" y="74" text-anchor="end" font-family="'Segoe UI',system-ui,sans-serif"
+        font-size="22" font-weight="800" fill="#FFD700">R$ 2 bilhões</text>
+
+  <!-- legenda tijolos -->
+  <text x="40" y="105" font-family="'Segoe UI',system-ui,sans-serif" font-size="12"
+        fill="#FAFAF8">Cada produto é um tijolo no fundo
+    <tspan fill="#F27321"> — 1.837 commits construindo isso</tspan></text>
+
+  
+      <g transform="translate(40,120)">
+        <rect x="0" y="0" width="118" height="42" rx="6"
+              fill="#0D1117" stroke="#21262D"
+              stroke-width="1.5" opacity="0">
+          <animate attributeName="opacity" from="0" to="1" dur="0.5s"
+                   begin="0.6s" fill="freeze"/>
+          <animateTransform attributeName="transform" type="translate"
+                   from="0 8" to="0 0" dur="0.5s" begin="0.6s" fill="freeze"/>
+        </rect>
+        <text x="59" y="19" text-anchor="middle" font-family="'Segoe UI',system-ui,sans-serif"
+              font-size="12" font-weight="700" fill="#FAFAF8" opacity="0">
+          FrotaOS
+          <animate attributeName="opacity" from="0" to="1" dur="0.5s" begin="0.8s" fill="freeze"/>
+        </text>
+        <text x="59" y="33" text-anchor="middle" font-family="'Segoe UI',system-ui,sans-serif"
+              font-size="9" fill="#8B949E" letter-spacing="0.5" opacity="0">
+          VALIDAÇÃO
+          <animate attributeName="opacity" from="0" to="0.85" dur="0.5s" begin="0.8s" fill="freeze"/>
+        </text>
+      </g>
+      <g transform="translate(170,120)">
+        <rect x="0" y="0" width="118" height="42" rx="6"
+              fill="#0D1117" stroke="#21262D"
+              stroke-width="1.5" opacity="0">
+          <animate attributeName="opacity" from="0" to="1" dur="0.5s"
+                   begin="0.72s" fill="freeze"/>
+          <animateTransform attributeName="transform" type="translate"
+                   from="0 8" to="0 0" dur="0.5s" begin="0.72s" fill="freeze"/>
+        </rect>
+        <text x="59" y="19" text-anchor="middle" font-family="'Segoe UI',system-ui,sans-serif"
+              font-size="12" font-weight="700" fill="#FAFAF8" opacity="0">
+          Mishyo
+          <animate attributeName="opacity" from="0" to="1" dur="0.5s" begin="0.92s" fill="freeze"/>
+        </text>
+        <text x="59" y="33" text-anchor="middle" font-family="'Segoe UI',system-ui,sans-serif"
+              font-size="9" fill="#8B949E" letter-spacing="0.5" opacity="0">
+          PAUSA
+          <animate attributeName="opacity" from="0" to="0.85" dur="0.5s" begin="0.92s" fill="freeze"/>
+        </text>
+      </g>
+      <g transform="translate(300,120)">
+        <rect x="0" y="0" width="118" height="42" rx="6"
+              fill="#0D1117" stroke="#21262D"
+              stroke-width="1.5" opacity="0">
+          <animate attributeName="opacity" from="0" to="1" dur="0.5s"
+                   begin="0.84s" fill="freeze"/>
+          <animateTransform attributeName="transform" type="translate"
+                   from="0 8" to="0 0" dur="0.5s" begin="0.84s" fill="freeze"/>
+        </rect>
+        <text x="59" y="19" text-anchor="middle" font-family="'Segoe UI',system-ui,sans-serif"
+              font-size="12" font-weight="700" fill="#FAFAF8" opacity="0">
+          Fieldoc
+          <animate attributeName="opacity" from="0" to="1" dur="0.5s" begin="1.04s" fill="freeze"/>
+        </text>
+        <text x="59" y="33" text-anchor="middle" font-family="'Segoe UI',system-ui,sans-serif"
+              font-size="9" fill="#8B949E" letter-spacing="0.5" opacity="0">
+          GATE
+          <animate attributeName="opacity" from="0" to="0.85" dur="0.5s" begin="1.04s" fill="freeze"/>
+        </text>
+      </g>
+      <g transform="translate(430,120)">
+        <rect x="0" y="0" width="118" height="42" rx="6"
+              fill="#F27321" stroke="#C45A10"
+              stroke-width="1.5" opacity="0">
+          <animate attributeName="opacity" from="0" to="1" dur="0.5s"
+                   begin="0.96s" fill="freeze"/>
+          <animateTransform attributeName="transform" type="translate"
+                   from="0 8" to="0 0" dur="0.5s" begin="0.96s" fill="freeze"/>
+        </rect>
+        <text x="59" y="19" text-anchor="middle" font-family="'Segoe UI',system-ui,sans-serif"
+              font-size="12" font-weight="700" fill="#fff" opacity="0">
+          InvestImob
+          <animate attributeName="opacity" from="0" to="1" dur="0.5s" begin="1.1600000000000001s" fill="freeze"/>
+        </text>
+        <text x="59" y="33" text-anchor="middle" font-family="'Segoe UI',system-ui,sans-serif"
+              font-size="9" fill="#ffe" letter-spacing="0.5" opacity="0">
+          PRODUÇÃO
+          <animate attributeName="opacity" from="0" to="0.85" dur="0.5s" begin="1.1600000000000001s" fill="freeze"/>
+        </text>
+      </g>
+      <g transform="translate(560,120)">
+        <rect x="0" y="0" width="118" height="42" rx="6"
+              fill="#F27321" stroke="#C45A10"
+              stroke-width="1.5" opacity="0">
+          <animate attributeName="opacity" from="0" to="1" dur="0.5s"
+                   begin="1.08s" fill="freeze"/>
+          <animateTransform attributeName="transform" type="translate"
+                   from="0 8" to="0 0" dur="0.5s" begin="1.08s" fill="freeze"/>
+        </rect>
+        <text x="59" y="19" text-anchor="middle" font-family="'Segoe UI',system-ui,sans-serif"
+              font-size="12" font-weight="700" fill="#fff" opacity="0">
+          Painel JM
+          <animate attributeName="opacity" from="0" to="1" dur="0.5s" begin="1.28s" fill="freeze"/>
+        </text>
+        <text x="59" y="33" text-anchor="middle" font-family="'Segoe UI',system-ui,sans-serif"
+              font-size="9" fill="#ffe" letter-spacing="0.5" opacity="0">
+          PRODUÇÃO
+          <animate attributeName="opacity" from="0" to="0.85" dur="0.5s" begin="1.28s" fill="freeze"/>
+        </text>
+      </g>
+      <g transform="translate(690,120)">
+        <rect x="0" y="0" width="118" height="42" rx="6"
+              fill="#0D1117" stroke="#21262D"
+              stroke-width="1.5" opacity="0">
+          <animate attributeName="opacity" from="0" to="1" dur="0.5s"
+                   begin="1.2s" fill="freeze"/>
+          <animateTransform attributeName="transform" type="translate"
+                   from="0 8" to="0 0" dur="0.5s" begin="1.2s" fill="freeze"/>
+        </rect>
+        <text x="59" y="19" text-anchor="middle" font-family="'Segoe UI',system-ui,sans-serif"
+              font-size="12" font-weight="700" fill="#FAFAF8" opacity="0">
+          MeuGuia
+          <animate attributeName="opacity" from="0" to="1" dur="0.5s" begin="1.4s" fill="freeze"/>
+        </text>
+        <text x="59" y="33" text-anchor="middle" font-family="'Segoe UI',system-ui,sans-serif"
+              font-size="9" fill="#8B949E" letter-spacing="0.5" opacity="0">
+          DEV
+          <animate attributeName="opacity" from="0" to="0.85" dur="0.5s" begin="1.4s" fill="freeze"/>
+        </text>
+      </g>
+
+  <!-- linha de base pulsante -->
+  <rect x="40" y="178" width="760" height="2" rx="1" fill="#21262D"/>
+  <rect x="40" y="178" width="200" height="2" rx="1" fill="#F27321">
+    <animate attributeName="width" values="0;200" dur="1.5s" begin="1.6s" fill="freeze"/>
+    <animate attributeName="opacity" values="0.5;1;0.5" dur="2.5s" begin="3s" repeatCount="indefinite"/>
+  </rect>
+  <text x="40" y="198" font-family="'Segoe UI',system-ui,sans-serif" font-size="10"
+        fill="#8B949E">O fundo pertence à fundação. Não tem dono. Tem uma missão.</text>
+</svg>

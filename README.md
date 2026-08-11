@@ -1,17 +1,12 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=venom&height=320&text=Johnata%20Moreira&fontSize=65&color=0:1A3D6E,50:F27321,100:C45A10&stroke=F27321&strokeWidth=2&fontColor=FAFAF8&desc=Fundador%20%7C%20Engenheiro%20%7C%20Construtor%20de%20prop%C3%B3sito&descSize=18&descAlignY=75&animation=fadeIn" width="100%"/>
+<img src="https://capsule-render.vercel.app/api?type=venom&height=300&text=Johnata%20Moreira&fontSize=64&color=0:1A3D6E,50:F27321,100:C45A10&stroke=F27321&strokeWidth=2&fontColor=FAFAF8&desc=Fundador%20%7C%20Engenheiro%20%7C%20Construtor%20de%20prop%C3%B3sito&descSize=18&descAlignY=74&animation=fadeIn" width="100%"/>
 
-<br/>
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fraunces&weight=700&size=23&pause=1200&color=F27321&center=true&vCenter=true&width=760&lines=Fundador+da+J%26JL+Tecnologia;Construindo+apps+que+financiam+o+Instituto+Jesus+Lind%C3%A3o;1.800%2B+commits+em+11+repos+privados;Esposo+da+Carol+%7C+Pai+da+Ester%2C+Estev%C3%A3o+e+Elis;%22Todo+ponto+de+vista+%C3%A9+a+vista+de+um+ponto.%22)](https://git.io/typing-svg)
 
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fraunces&weight=700&size=24&pause=1200&color=F27321&center=true&vCenter=true&width=750&lines=Fundador+da+J%26JL+Tecnologia;Construindo+apps+que+financiam+o+Instituto+Jesus+Lind%C3%A3o;Tecnologia+com+prop%C3%B3sito+real;Esp%C3%B3so+da+Carol+%7C+Pai+da+Ester%2C+Estev%C3%A3o+e+Elis;%22Todo+ponto+de+vista+%C3%A9+a+vista+de+um+ponto.%22)](https://git.io/typing-svg)
-
-<br/>
-
-![Visitors](https://komarev.com/ghpvc/?username=JohnataMoreira&style=for-the-badge&color=F27321&label=VISITANTES)
+![Visitantes](https://komarev.com/ghpvc/?username=JohnataMoreira&style=for-the-badge&color=F27321&label=VISITANTES)
 [![Site](https://img.shields.io/badge/johnatamoreira.com.br-1A3D6E?style=for-the-badge&logo=googlechrome&logoColor=white)](https://johnatamoreira.com.br)
 [![J&JL](https://img.shields.io/badge/grupojjl.com.br-F27321?style=for-the-badge&logo=firefox&logoColor=white)](https://grupojjl.com.br)
-[![Portfolio](https://img.shields.io/badge/Ver%20Portfólio-1E1E1E?style=for-the-badge&logo=github&logoColor=white)](https://github.com/JohnataMoreira/portfolio)
 
 </div>
 
@@ -38,18 +33,39 @@ const johnata: Founder = {
 
 ---
 
-## 🏢 J&JL Tecnologia
+## 📊 A realidade dos números
 
-> Empresa pequena. Missão grande.
-
-Desenvolvemos apps, automatizamos vendas imobiliárias com IA e gerenciamos tráfego pago — tudo com um objetivo que vai além do negócio: **financiar o Instituto Jesus Lindão.**
+> Serviços públicos de estatística só enxergam repositórios públicos — por isso mostram "11 commits".
+> Os cards abaixo são **gerados pela minha própria automação**, que lê os 11 repos privados via token.
+> O que você vê aqui é o trabalho real.
 
 <div align="center">
 
-[![Ver empresa](https://img.shields.io/badge/Conheça%20a%20J%26JL-grupojjl.com.br-F27321?style=for-the-badge&logo=firefox&logoColor=white)](https://grupojjl.com.br)
-[![Portfólio completo](https://img.shields.io/badge/Portfólio%20Completo-github.com%2FJohnataMoreira%2Fportfolio-1E1E1E?style=for-the-badge&logo=github&logoColor=white)](https://github.com/JohnataMoreira/portfolio)
+<img src="https://raw.githubusercontent.com/JohnataMoreira/johnatamoreira/output/central-comando.svg" width="98%" alt="Central de Comando — estatísticas reais"/>
+
+<br/>
+
+<img src="https://raw.githubusercontent.com/JohnataMoreira/johnatamoreira/output/ranking.svg" width="98%" alt="Ranking de projetos por commits reais"/>
 
 </div>
+
+---
+
+## 🏫 Instituto Jesus Lindão
+
+<div align="center">
+
+<img src="https://raw.githubusercontent.com/JohnataMoreira/johnatamoreira/output/instituto.svg" width="98%" alt="Instituto Jesus Lindão — o propósito por trás do código"/>
+
+</div>
+
+> *"Um dia, haverá uma escola onde nenhuma criança será excluída por não poder pagar.*
+> *Um hospital onde a dignidade do atendimento não depende do saldo na conta."*
+
+**Meta:** Fundo perpétuo de **R$ 2 bilhões**. Os rendimentos sustentam as operações para sempre.
+O fundo pertence à fundação. Não tem herdeiro. Não tem dono. Tem uma missão.
+
+Cada app que construo é um tijolo nesse fundo.
 
 ---
 
@@ -66,7 +82,7 @@ App offline-first para gestores controlarem veículos, manutenções e motorista
 
 `React Native` `Expo Router v3` `NestJS` `WatermelonDB`
 
-![Status](https://img.shields.io/badge/-Em%20Validação-F27321?style=flat-square)
+![Status](https://img.shields.io/badge/-Em%20Valida%C3%A7%C3%A3o-F27321?style=flat-square)
 
 </td>
 <td width="50%" valign="top">
@@ -98,11 +114,11 @@ Técnico no campo + gestor no painel. Rastreabilidade total, histórico auditáv
 <td width="50%" valign="top">
 
 ### 🗺️ MeuGuia
-**Controle financeiro para motoristas de app**
+**Financeiro para motoristas de app**
 
 Calcula o ganho real por corrida descontando combustível, depreciação e taxas.
 
-`Flutter` `Dart` `Expo`
+`Flutter` `Dart`
 
 ![Status](https://img.shields.io/badge/-Em%20Desenvolvimento-1A3D6E?style=flat-square)
 
@@ -112,25 +128,25 @@ Calcula o ganho real por corrida descontando combustível, depreciação e taxas
 <td width="50%" valign="top">
 
 ### 🏠 InvestImob
-**SaaS de automação imobiliária com IA**
+**SaaS imobiliário com IA**
 
 Qualifica leads, agenda visitas e libera corretores via WhatsApp + IA. Multi-tenant enterprise.
 
-`NestJS` `Next.js` `React Native` `Gemini` `GPT-4`
+`NestJS` `Next.js` `React Native` `Gemini`
 
-![Status](https://img.shields.io/badge/-Fase%2011%20%7C%20Pausado-3D3D3D?style=flat-square)
+![Status](https://img.shields.io/badge/-Pausado-3D3D3D?style=flat-square)
 
 </td>
 <td width="50%" valign="top">
 
-### 📊 Painel Tráfego
-**Dashboard para corretores de imóveis**
+### 📊 Painel Tráfego JM
+**Dashboard para corretores**
 
-Corretores veem campanhas, leads e resultados do Meta Ads num dashboard limpo e exclusivo.
+Corretores veem campanhas, leads e resultados do Meta Ads num painel limpo e exclusivo.
 
 `Next.js` `Supabase` `Meta Ads API` `Tailwind`
 
-![Status](https://img.shields.io/badge/-Em%20Produção-25D366?style=flat-square)
+![Status](https://img.shields.io/badge/-Em%20Produ%C3%A7%C3%A3o-25D366?style=flat-square)
 
 </td>
 </tr>
@@ -150,75 +166,35 @@ Corretores veem campanhas, leads e resultados do Meta Ads num dashboard limpo e 
 ![Supabase](https://img.shields.io/badge/Supabase-3ECF8E?style=for-the-badge&logo=supabase&logoColor=black)
 ![Tailwind](https://img.shields.io/badge/Tailwind-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)
 ![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
-![Expo](https://img.shields.io/badge/Expo-000020?style=for-the-badge&logo=expo&logoColor=white)
 ![n8n](https://img.shields.io/badge/n8n-EA4B71?style=for-the-badge&logo=n8n&logoColor=white)
 ![Cloudflare](https://img.shields.io/badge/Cloudflare-F38020?style=for-the-badge&logo=cloudflare&logoColor=white)
-![Hetzner](https://img.shields.io/badge/Hetzner-D50000?style=for-the-badge&logo=hetzner&logoColor=white)
 
 </div>
 
 ---
 
-## 📊 GitHub Stats
+## 🔥 Atividade
 
 <div align="center">
 
-<!-- STREAK — confirmado funcionando ✅ -->
-<img width="98%" src="https://streak-stats.demolab.com?user=JohnataMoreira&theme=tokyonight&hide_border=true&background=0D1117&ring=F27321&fire=C45A10&currStreakLabel=F27321&sideLabels=FAFAF8&dates=3D3D3D&sideNums=F27321&currStreakNum=FAFAF8&border_radius=12&locale=pt_BR&date_format=j/n/Y" />
+<img width="98%" src="https://streak-stats.demolab.com?user=JohnataMoreira&theme=tokyonight&hide_border=true&background=0D1117&ring=F27321&fire=C45A10&currStreakLabel=F27321&sideLabels=FAFAF8&dates=8B949E&sideNums=F27321&currStreakNum=FAFAF8&border_radius=12&locale=pt_BR&date_format=j/n/Y" alt="Sequência de contribuições"/>
 
 <br/>
 
-<!-- STATS via instância própria do fork (após deploy no Vercel) -->
-<!-- Fallback: usando githubstats.me — serviço independente -->
-<img height="195" src="https://github-readme-stats.vercel.app/api?username=JohnataMoreira&show_icons=true&count_private=true&include_all_commits=true&hide_border=true&title_color=F27321&icon_color=F27321&text_color=FAFAF8&bg_color=0D1117&ring_color=F27321&border_radius=12&locale=pt&custom_title=Estatísticas+de+Johnata" />
-<img height="195" src="https://github-readme-stats.vercel.app/api/top-langs/?username=JohnataMoreira&layout=donut&count_private=true&hide_border=true&title_color=F27321&text_color=FAFAF8&bg_color=0D1117&border_radius=12&langs_count=8&locale=pt&custom_title=Linguagens" />
+<img width="98%" src="https://github-readme-activity-graph.vercel.app/graph?username=JohnataMoreira&bg_color=0D1117&color=F27321&line=F27321&point=C45A10&area=true&area_color=F27321&hide_border=true&radius=12&custom_title=Atividade%20de%20Desenvolvimento" alt="Gráfico de atividade"/>
 
 <br/>
 
-<!-- PROFILE SUMMARY CARDS — serviço independente, visual único -->
-<img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=JohnataMoreira&theme=tokyonight" width="98%" />
+<img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=JohnataMoreira&theme=tokyonight" width="98%" alt="Resumo do perfil"/>
 
 <br/>
 
-<img src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=JohnataMoreira&theme=tokyonight" width="32%" />
-<img src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=JohnataMoreira&theme=tokyonight" width="32%" />
-<img src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=JohnataMoreira&theme=tokyonight" width="32%" />
-
-<br/>
-
-<!-- ACTIVITY GRAPH — confirmado funcionando ✅ -->
-<img width="98%" src="https://github-readme-activity-graph.vercel.app/graph?username=JohnataMoreira&bg_color=0D1117&color=F27321&line=F27321&point=C45A10&area=true&area_color=F27321&hide_border=true&radius=12&custom_title=Atividade+de+Desenvolvimento+—+Johnata+Moreira" />
-
-<br/>
-
-<!-- TROFEUS -->
-<img width="98%" src="https://github-profile-trophy.vercel.app/?username=JohnataMoreira&theme=tokyonight&no-frame=true&column=7&margin-w=10&margin-h=10" />
-
-<br/>
-
-<!-- SNAKE ANIMATION — gerada pelo GitHub Actions próprio ✅ -->
+<!-- Snake: gerado pelo meu próprio GitHub Action -->
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/JohnataMoreira/JohnataMoreira/output/github-contribution-grid-snake-dark.svg" />
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/JohnataMoreira/JohnataMoreira/output/github-contribution-grid-snake.svg" />
-  <img alt="Contribution snake" src="https://raw.githubusercontent.com/JohnataMoreira/JohnataMoreira/output/github-contribution-grid-snake-dark.svg" width="98%" />
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/JohnataMoreira/johnatamoreira/output/github-contribution-grid-snake-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/JohnataMoreira/johnatamoreira/output/github-contribution-grid-snake.svg" />
+  <img alt="Snake das contribuições" src="https://raw.githubusercontent.com/JohnataMoreira/johnatamoreira/output/github-contribution-grid-snake-dark.svg" width="98%" />
 </picture>
-
-</div>
----
-
-## 🏫 Instituto Jesus Lindão
-
-<div align="center">
-
-> *"Um dia, haverá uma escola onde nenhuma criança será excluída por não poder pagar.*
-> *Um hospital onde a dignidade do atendimento não depende do saldo na conta."*
-
-**Meta:** Fundo perpétuo de **R$ 2 bilhões**. Os rendimentos sustentam as operações para sempre.
-O fundo pertence à fundação. Não tem herdeiro. Não tem dono. Tem uma missão.
-
-Cada app que construímos é um tijolo nesse fundo.
-
-[![Instituto](https://img.shields.io/badge/Saiba%20mais-Instituto%20Jesus%20Lindão-F27321?style=for-the-badge)](https://grupojjl.com.br/instituto)
 
 </div>
 

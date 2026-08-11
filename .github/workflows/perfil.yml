@@ -1,0 +1,56 @@
+name: Gerar Perfil (cards + snake)
+
+# Gera os cards SVG dinâmicos (dados reais dos repos privados) E a animação
+# do snake, publicando tudo junto na branch `output`. Um workflow só evita
+# que um sobrescreva o outro na branch de saída.
+
+on:
+  schedule:
+    - cron: "0 6 * * *"    # todo dia às 6h UTC (~3h BRT)
+  workflow_dispatch:        # botão de rodar manual
+  push:
+    branches: [main]
+    paths:
+      - "scripts/generate-cards.mjs"
+      - ".github/workflows/perfil.yml"
+
+jobs:
+  gerar:
+    permissions:
+      contents: write
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Gerar cards SVG (dados reais via token)
+        env:
+          GH_TOKEN: ${{ secrets.CARDS_TOKEN }}
+        run: |
+          node scripts/generate-cards.mjs
+          mkdir -p dist
+          cp cards/*.svg dist/
+
+      - name: Gerar animação Snake
+        uses: Platane/snk/svg-only@v3
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          outputs: |
+            dist/github-contribution-grid-snake.svg
+            dist/github-contribution-grid-snake-dark.svg?palette=github-dark
+
+      - name: Publicar tudo na branch output
+        uses: crazy-max/ghaction-github-pages@v4
+        with:
+          target_branch: output
+          build_dir: dist
+          keep_history: false
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
