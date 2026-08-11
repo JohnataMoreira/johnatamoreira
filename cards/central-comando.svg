@@ -28,7 +28,7 @@
     <g transform="translate(40,130)">
       <text x="0" y="0" font-family="'Segoe UI',system-ui,sans-serif" font-size="42"
             font-weight="800" fill="#F27321" opacity="0">
-        1.839
+        1.841
         <animate attributeName="opacity" from="0" to="1" dur="0.8s"
                  begin="0.2s" fill="freeze"/>
         <animateTransform attributeName="transform" type="translate"

@@ -416,22 +416,23 @@ function cardRanking(d) {
 // CARD 4 — "SEQUÊNCIA" (streak próprio, sem depender de serviço externo)
 // ============================================================
 function cardStreak(d) {
-  const W = 840, H = 200;
+  const W = 840, H = 210;
   const s = d.streak || { total: 0, current: 0, best: 0, currentSince: "", bestRange: "" };
 
-  // três colunas: total | streak atual (anel de fogo) | maior streak
-  const col = (cx, num, label, sub, color, delay) => `
-    <text x="${cx}" y="96" text-anchor="middle" font-family="'Segoe UI',system-ui,sans-serif"
-          font-size="44" font-weight="800" fill="${color}" opacity="0">${esc(num)}
+  // Colunas com número + rótulo + subtítulo. Sem anel sólido apertando o texto:
+  // a coluna central ganha um halo de fogo AMPLO e suave por trás, que nunca corta.
+  const col = (cx, num, label, sub, color, delay, big) => `
+    <text x="${cx}" y="98" text-anchor="middle" font-family="'Segoe UI',system-ui,sans-serif"
+          font-size="${big ? 40 : 38}" font-weight="800" fill="${color}" opacity="0">${esc(num)}
       <animate attributeName="opacity" from="0" to="1" dur="0.7s" begin="${delay}s" fill="freeze"/>
       <animateTransform attributeName="transform" type="translate" from="0 10" to="0 0"
                dur="0.7s" begin="${delay}s" fill="freeze"/>
     </text>
-    <text x="${cx}" y="122" text-anchor="middle" font-family="'Segoe UI',system-ui,sans-serif"
+    <text x="${cx}" y="126" text-anchor="middle" font-family="'Segoe UI',system-ui,sans-serif"
           font-size="13" font-weight="600" fill="${C.cream}" letter-spacing="0.5" opacity="0">${esc(label)}
       <animate attributeName="opacity" from="0" to="1" dur="0.7s" begin="${delay + 0.15}s" fill="freeze"/>
     </text>
-    <text x="${cx}" y="142" text-anchor="middle" font-family="'Segoe UI',system-ui,sans-serif"
+    <text x="${cx}" y="146" text-anchor="middle" font-family="'Segoe UI',system-ui,sans-serif"
           font-size="10" fill="${C.mute}" opacity="0">${esc(sub)}
       <animate attributeName="opacity" from="0" to="1" dur="0.7s" begin="${delay + 0.25}s" fill="freeze"/>
     </text>`;
@@ -446,7 +447,8 @@ function cardStreak(d) {
       <stop offset="1" stop-color="${C.terraDeep}"/>
     </linearGradient>
     <radialGradient id="gFire" cx="0.5" cy="0.5" r="0.5">
-      <stop offset="0" stop-color="${C.terra}" stop-opacity="0.35"/>
+      <stop offset="0" stop-color="${C.terra}" stop-opacity="0.30"/>
+      <stop offset="0.6" stop-color="${C.terra}" stop-opacity="0.10"/>
       <stop offset="1" stop-color="${C.terra}" stop-opacity="0"/>
     </radialGradient>
   </defs>
@@ -456,27 +458,26 @@ function cardStreak(d) {
   <text x="40" y="42" font-family="'Segoe UI',system-ui,sans-serif" font-size="18"
         font-weight="800" fill="${C.cream}">🔥 Sequência de contribuições</text>
 
-  <!-- halo de fogo atrás da coluna central (streak atual) -->
-  <circle cx="${cx2}" cy="88" r="70" fill="url(#gFire)">
-    <animate attributeName="opacity" values="0.6;1;0.6" dur="2.5s" repeatCount="indefinite"/>
-  </circle>
-  <!-- anel animado da streak atual -->
-  <circle cx="${cx2}" cy="88" r="58" fill="none" stroke="${C.line}" stroke-width="3"/>
-  <circle cx="${cx2}" cy="88" r="58" fill="none" stroke="${C.terra}" stroke-width="3"
-          stroke-linecap="round" stroke-dasharray="365" stroke-dashoffset="365"
-          transform="rotate(-90 ${cx2} 88)">
-    <animate attributeName="stroke-dashoffset" from="365" to="70" dur="1.2s" begin="0.3s" fill="freeze"/>
-  </circle>
+  <!-- halo de fogo AMPLO e suave atrás da coluna central (não tem borda, não corta texto) -->
+  <ellipse cx="${cx2}" cy="108" rx="120" ry="80" fill="url(#gFire)">
+    <animate attributeName="opacity" values="0.7;1;0.7" dur="2.8s" repeatCount="indefinite"/>
+  </ellipse>
 
   <!-- divisores verticais -->
-  <line x1="${W / 3}" y1="60" x2="${W / 3}" y2="150" stroke="${C.line}" stroke-width="1"/>
-  <line x1="${(2 * W) / 3}" y1="60" x2="${(2 * W) / 3}" y2="150" stroke="${C.line}" stroke-width="1"/>
+  <line x1="${W / 3}" y1="64" x2="${W / 3}" y2="152" stroke="${C.line}" stroke-width="1"/>
+  <line x1="${(2 * W) / 3}" y1="64" x2="${(2 * W) / 3}" y2="152" stroke="${C.line}" stroke-width="1"/>
 
-  ${col(cx1, s.total.toLocaleString("pt-BR"), "CONTRIBUIÇÕES", "último ano", C.cream, 0.2)}
-  ${col(cx2, s.current + (s.current === 1 ? " dia" : " dias"), "SEQUÊNCIA ATUAL", s.currentSince ? "desde " + s.currentSince : "—", C.terra, 0.5)}
-  ${col(cx3, s.best + (s.best === 1 ? " dia" : " dias"), "MAIOR SEQUÊNCIA", s.bestRange || "—", C.gold, 0.8)}
+  ${col(cx1, s.total.toLocaleString("pt-BR"), "CONTRIBUIÇÕES", "último ano", C.cream, 0.2, false)}
+  ${col(cx2, s.current + (s.current === 1 ? " dia" : " dias"), "SEQUÊNCIA ATUAL", s.currentSince ? "desde " + s.currentSince : "—", C.terra, 0.5, true)}
+  ${col(cx3, s.best + (s.best === 1 ? " dia" : " dias"), "MAIOR SEQUÊNCIA", s.bestRange || "—", C.gold, 0.8, false)}
 
-  <text x="${W / 2}" y="178" text-anchor="middle" font-family="'Segoe UI',system-ui,sans-serif"
+  <!-- linha de acento animada sob a coluna central (não invade o texto) -->
+  <rect x="${cx2 - 40}" y="160" width="0" height="3" rx="1.5" fill="${C.terra}">
+    <animate attributeName="width" from="0" to="80" dur="0.9s" begin="0.9s" fill="freeze"/>
+    <animate attributeName="opacity" values="0.5;1;0.5" dur="2.5s" begin="1.8s" repeatCount="indefinite"/>
+  </rect>
+
+  <text x="${W / 2}" y="188" text-anchor="middle" font-family="'Segoe UI',system-ui,sans-serif"
         font-size="10" fill="${C.mute}">Calculado a partir de todos os repositórios — inclusive os privados</text>
 </svg>`;
 }

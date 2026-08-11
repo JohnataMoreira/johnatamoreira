@@ -46,12 +46,12 @@
         <text x="40" y="0" font-family="'Segoe UI',system-ui,sans-serif" font-size="14"
               font-weight="600" fill="#FAFAF8">Central de Comando (QG)</text>
         <text x="800" y="0" text-anchor="end" font-family="'Segoe UI',system-ui,sans-serif"
-              font-size="14" font-weight="700" fill="#F27321" opacity="0">273 commits
+              font-size="14" font-weight="700" fill="#F27321" opacity="0">274 commits
           <animate attributeName="opacity" from="0" to="1" dur="0.5s" begin="0.8999999999999999s" fill="freeze"/>
         </text>
         <rect x="40" y="8" width="760" height="12" rx="4" fill="#21262D"/>
         <rect x="40" y="8" width="0" height="12" rx="4" fill="url(#gBar)">
-          <animate attributeName="width" from="0" to="367.87234042553195" dur="0.9s"
+          <animate attributeName="width" from="0" to="369.21985815602835" dur="0.9s"
                    begin="0.6s" fill="freeze"/>
         </rect>
       </g>

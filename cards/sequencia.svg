@@ -1,4 +1,4 @@
-<svg width="840" height="200" viewBox="0 0 840 200" xmlns="http://www.w3.org/2000/svg">
+<svg width="840" height="210" viewBox="0 0 840 210" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <linearGradient id="gStreak" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0" stop-color="#1A3D6E"/>
@@ -6,78 +6,78 @@
       <stop offset="1" stop-color="#C45A10"/>
     </linearGradient>
     <radialGradient id="gFire" cx="0.5" cy="0.5" r="0.5">
-      <stop offset="0" stop-color="#F27321" stop-opacity="0.35"/>
+      <stop offset="0" stop-color="#F27321" stop-opacity="0.30"/>
+      <stop offset="0.6" stop-color="#F27321" stop-opacity="0.10"/>
       <stop offset="1" stop-color="#F27321" stop-opacity="0"/>
     </radialGradient>
   </defs>
-  <rect x="1.5" y="1.5" width="837" height="197" rx="14"
+  <rect x="1.5" y="1.5" width="837" height="207" rx="14"
         fill="#161B22" stroke="url(#gStreak)" stroke-width="2"/>
 
   <text x="40" y="42" font-family="'Segoe UI',system-ui,sans-serif" font-size="18"
         font-weight="800" fill="#FAFAF8">🔥 Sequência de contribuições</text>
 
-  <!-- halo de fogo atrás da coluna central (streak atual) -->
-  <circle cx="420" cy="88" r="70" fill="url(#gFire)">
-    <animate attributeName="opacity" values="0.6;1;0.6" dur="2.5s" repeatCount="indefinite"/>
-  </circle>
-  <!-- anel animado da streak atual -->
-  <circle cx="420" cy="88" r="58" fill="none" stroke="#21262D" stroke-width="3"/>
-  <circle cx="420" cy="88" r="58" fill="none" stroke="#F27321" stroke-width="3"
-          stroke-linecap="round" stroke-dasharray="365" stroke-dashoffset="365"
-          transform="rotate(-90 420 88)">
-    <animate attributeName="stroke-dashoffset" from="365" to="70" dur="1.2s" begin="0.3s" fill="freeze"/>
-  </circle>
+  <!-- halo de fogo AMPLO e suave atrás da coluna central (não tem borda, não corta texto) -->
+  <ellipse cx="420" cy="108" rx="120" ry="80" fill="url(#gFire)">
+    <animate attributeName="opacity" values="0.7;1;0.7" dur="2.8s" repeatCount="indefinite"/>
+  </ellipse>
 
   <!-- divisores verticais -->
-  <line x1="280" y1="60" x2="280" y2="150" stroke="#21262D" stroke-width="1"/>
-  <line x1="560" y1="60" x2="560" y2="150" stroke="#21262D" stroke-width="1"/>
+  <line x1="280" y1="64" x2="280" y2="152" stroke="#21262D" stroke-width="1"/>
+  <line x1="560" y1="64" x2="560" y2="152" stroke="#21262D" stroke-width="1"/>
 
   
-    <text x="140" y="96" text-anchor="middle" font-family="'Segoe UI',system-ui,sans-serif"
-          font-size="44" font-weight="800" fill="#FAFAF8" opacity="0">827
+    <text x="140" y="98" text-anchor="middle" font-family="'Segoe UI',system-ui,sans-serif"
+          font-size="38" font-weight="800" fill="#FAFAF8" opacity="0">829
       <animate attributeName="opacity" from="0" to="1" dur="0.7s" begin="0.2s" fill="freeze"/>
       <animateTransform attributeName="transform" type="translate" from="0 10" to="0 0"
                dur="0.7s" begin="0.2s" fill="freeze"/>
     </text>
-    <text x="140" y="122" text-anchor="middle" font-family="'Segoe UI',system-ui,sans-serif"
+    <text x="140" y="126" text-anchor="middle" font-family="'Segoe UI',system-ui,sans-serif"
           font-size="13" font-weight="600" fill="#FAFAF8" letter-spacing="0.5" opacity="0">CONTRIBUIÇÕES
       <animate attributeName="opacity" from="0" to="1" dur="0.7s" begin="0.35s" fill="freeze"/>
     </text>
-    <text x="140" y="142" text-anchor="middle" font-family="'Segoe UI',system-ui,sans-serif"
+    <text x="140" y="146" text-anchor="middle" font-family="'Segoe UI',system-ui,sans-serif"
           font-size="10" fill="#8B949E" opacity="0">último ano
       <animate attributeName="opacity" from="0" to="1" dur="0.7s" begin="0.45s" fill="freeze"/>
     </text>
   
-    <text x="420" y="96" text-anchor="middle" font-family="'Segoe UI',system-ui,sans-serif"
-          font-size="44" font-weight="800" fill="#F27321" opacity="0">15 dias
+    <text x="420" y="98" text-anchor="middle" font-family="'Segoe UI',system-ui,sans-serif"
+          font-size="40" font-weight="800" fill="#F27321" opacity="0">15 dias
       <animate attributeName="opacity" from="0" to="1" dur="0.7s" begin="0.5s" fill="freeze"/>
       <animateTransform attributeName="transform" type="translate" from="0 10" to="0 0"
                dur="0.7s" begin="0.5s" fill="freeze"/>
     </text>
-    <text x="420" y="122" text-anchor="middle" font-family="'Segoe UI',system-ui,sans-serif"
+    <text x="420" y="126" text-anchor="middle" font-family="'Segoe UI',system-ui,sans-serif"
           font-size="13" font-weight="600" fill="#FAFAF8" letter-spacing="0.5" opacity="0">SEQUÊNCIA ATUAL
       <animate attributeName="opacity" from="0" to="1" dur="0.7s" begin="0.65s" fill="freeze"/>
     </text>
-    <text x="420" y="142" text-anchor="middle" font-family="'Segoe UI',system-ui,sans-serif"
+    <text x="420" y="146" text-anchor="middle" font-family="'Segoe UI',system-ui,sans-serif"
           font-size="10" fill="#8B949E" opacity="0">desde 28/7/2026
       <animate attributeName="opacity" from="0" to="1" dur="0.7s" begin="0.75s" fill="freeze"/>
     </text>
   
-    <text x="700" y="96" text-anchor="middle" font-family="'Segoe UI',system-ui,sans-serif"
-          font-size="44" font-weight="800" fill="#FFD700" opacity="0">23 dias
+    <text x="700" y="98" text-anchor="middle" font-family="'Segoe UI',system-ui,sans-serif"
+          font-size="38" font-weight="800" fill="#FFD700" opacity="0">23 dias
       <animate attributeName="opacity" from="0" to="1" dur="0.7s" begin="0.8s" fill="freeze"/>
       <animateTransform attributeName="transform" type="translate" from="0 10" to="0 0"
                dur="0.7s" begin="0.8s" fill="freeze"/>
     </text>
-    <text x="700" y="122" text-anchor="middle" font-family="'Segoe UI',system-ui,sans-serif"
+    <text x="700" y="126" text-anchor="middle" font-family="'Segoe UI',system-ui,sans-serif"
           font-size="13" font-weight="600" fill="#FAFAF8" letter-spacing="0.5" opacity="0">MAIOR SEQUÊNCIA
       <animate attributeName="opacity" from="0" to="1" dur="0.7s" begin="0.9500000000000001s" fill="freeze"/>
     </text>
-    <text x="700" y="142" text-anchor="middle" font-family="'Segoe UI',system-ui,sans-serif"
+    <text x="700" y="146" text-anchor="middle" font-family="'Segoe UI',system-ui,sans-serif"
           font-size="10" fill="#8B949E" opacity="0">4/7/2026 — 26/7/2026
       <animate attributeName="opacity" from="0" to="1" dur="0.7s" begin="1.05s" fill="freeze"/>
     </text>
 
-  <text x="420" y="178" text-anchor="middle" font-family="'Segoe UI',system-ui,sans-serif"
+  <!-- linha de acento animada sob a coluna central (não invade o texto) -->
+  <rect x="380" y="160" width="0" height="3" rx="1.5" fill="#F27321">
+    <animate attributeName="width" from="0" to="80" dur="0.9s" begin="0.9s" fill="freeze"/>
+    <animate attributeName="opacity" values="0.5;1;0.5" dur="2.5s" begin="1.8s" repeatCount="indefinite"/>
+  </rect>
+
+  <text x="420" y="188" text-anchor="middle" font-family="'Segoe UI',system-ui,sans-serif"
         font-size="10" fill="#8B949E">Calculado a partir de todos os repositórios — inclusive os privados</text>
 </svg>
