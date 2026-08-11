@@ -1,80 +1,84 @@
-<svg width="840" height="240" viewBox="0 0 840 240" xmlns="http://www.w3.org/2000/svg">
+<svg width="840" height="300" viewBox="0 0 840 300" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <linearGradient id="gRank" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0" stop-color="#F27321"/>
       <stop offset="1" stop-color="#1A3D6E"/>
     </linearGradient>
+    <linearGradient id="gBar" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#C45A10"/>
+      <stop offset="1" stop-color="#F27321"/>
+    </linearGradient>
   </defs>
-  <rect x="1.5" y="1.5" width="837" height="237" rx="14"
+  <rect x="1.5" y="1.5" width="837" height="297" rx="14"
         fill="#161B22" stroke="url(#gRank)" stroke-width="2"/>
   <text x="40" y="48" font-family="'Segoe UI',system-ui,sans-serif" font-size="20"
         font-weight="800" fill="#FAFAF8">Onde a energia foi</text>
-  <text x="40" y="66" font-family="'Segoe UI',system-ui,sans-serif" font-size="12"
+  <text x="40" y="70" font-family="'Segoe UI',system-ui,sans-serif" font-size="12"
         fill="#8B949E">Top 5 projetos por commits reais — o trabalho que não aparece nos rankings públicos</text>
   
-      <g transform="translate(40,78)">
-        <text x="0" y="0" font-family="'Segoe UI',system-ui,sans-serif" font-size="13"
+      <g transform="translate(0,96)">
+        <text x="40" y="0" font-family="'Segoe UI',system-ui,sans-serif" font-size="14"
               font-weight="600" fill="#FAFAF8">Mishyo</text>
-        <rect x="200" y="-12" width="500" height="14" rx="3" fill="#21262D"/>
-        <rect x="200" y="-12" width="0" height="14" rx="3" fill="#F27321">
-          <animate attributeName="width" from="0" to="500" dur="0.9s"
-                   begin="0.3s" fill="freeze"/>
-        </rect>
-        <text x="750" y="0" font-family="'Segoe UI',system-ui,sans-serif" font-size="13"
-              font-weight="700" fill="#F27321" opacity="0">564 commits
+        <text x="800" y="0" text-anchor="end" font-family="'Segoe UI',system-ui,sans-serif"
+              font-size="14" font-weight="700" fill="#F27321" opacity="0">564 commits
           <animate attributeName="opacity" from="0" to="1" dur="0.5s" begin="0.6s" fill="freeze"/>
         </text>
-      </g>
-      <g transform="translate(40,110)">
-        <text x="0" y="0" font-family="'Segoe UI',system-ui,sans-serif" font-size="13"
-              font-weight="600" fill="#FAFAF8">FrotaOS</text>
-        <rect x="200" y="-12" width="500" height="14" rx="3" fill="#21262D"/>
-        <rect x="200" y="-12" width="0" height="14" rx="3" fill="#F27321">
-          <animate attributeName="width" from="0" to="319.1489361702128" dur="0.9s"
-                   begin="0.44999999999999996s" fill="freeze"/>
+        <rect x="40" y="8" width="760" height="12" rx="4" fill="#21262D"/>
+        <rect x="40" y="8" width="0" height="12" rx="4" fill="url(#gBar)">
+          <animate attributeName="width" from="0" to="760" dur="0.9s"
+                   begin="0.3s" fill="freeze"/>
         </rect>
-        <text x="750" y="0" font-family="'Segoe UI',system-ui,sans-serif" font-size="13"
-              font-weight="700" fill="#F27321" opacity="0">360 commits
+      </g>
+      <g transform="translate(0,138)">
+        <text x="40" y="0" font-family="'Segoe UI',system-ui,sans-serif" font-size="14"
+              font-weight="600" fill="#FAFAF8">FrotaOS</text>
+        <text x="800" y="0" text-anchor="end" font-family="'Segoe UI',system-ui,sans-serif"
+              font-size="14" font-weight="700" fill="#F27321" opacity="0">360 commits
           <animate attributeName="opacity" from="0" to="1" dur="0.5s" begin="0.75s" fill="freeze"/>
         </text>
-      </g>
-      <g transform="translate(40,142)">
-        <text x="0" y="0" font-family="'Segoe UI',system-ui,sans-serif" font-size="13"
-              font-weight="600" fill="#FAFAF8">Central de Comando (QG)</text>
-        <rect x="200" y="-12" width="500" height="14" rx="3" fill="#21262D"/>
-        <rect x="200" y="-12" width="0" height="14" rx="3" fill="#F27321">
-          <animate attributeName="width" from="0" to="241.13475177304963" dur="0.9s"
-                   begin="0.6s" fill="freeze"/>
+        <rect x="40" y="8" width="760" height="12" rx="4" fill="#21262D"/>
+        <rect x="40" y="8" width="0" height="12" rx="4" fill="url(#gBar)">
+          <animate attributeName="width" from="0" to="485.10638297872345" dur="0.9s"
+                   begin="0.44999999999999996s" fill="freeze"/>
         </rect>
-        <text x="750" y="0" font-family="'Segoe UI',system-ui,sans-serif" font-size="13"
-              font-weight="700" fill="#F27321" opacity="0">272 commits
+      </g>
+      <g transform="translate(0,180)">
+        <text x="40" y="0" font-family="'Segoe UI',system-ui,sans-serif" font-size="14"
+              font-weight="600" fill="#FAFAF8">Central de Comando (QG)</text>
+        <text x="800" y="0" text-anchor="end" font-family="'Segoe UI',system-ui,sans-serif"
+              font-size="14" font-weight="700" fill="#F27321" opacity="0">273 commits
           <animate attributeName="opacity" from="0" to="1" dur="0.5s" begin="0.8999999999999999s" fill="freeze"/>
         </text>
-      </g>
-      <g transform="translate(40,174)">
-        <text x="0" y="0" font-family="'Segoe UI',system-ui,sans-serif" font-size="13"
-              font-weight="600" fill="#FAFAF8">Painel Tráfego JM</text>
-        <rect x="200" y="-12" width="500" height="14" rx="3" fill="#21262D"/>
-        <rect x="200" y="-12" width="0" height="14" rx="3" fill="#F27321">
-          <animate attributeName="width" from="0" to="238.47517730496455" dur="0.9s"
-                   begin="0.75s" fill="freeze"/>
+        <rect x="40" y="8" width="760" height="12" rx="4" fill="#21262D"/>
+        <rect x="40" y="8" width="0" height="12" rx="4" fill="url(#gBar)">
+          <animate attributeName="width" from="0" to="367.87234042553195" dur="0.9s"
+                   begin="0.6s" fill="freeze"/>
         </rect>
-        <text x="750" y="0" font-family="'Segoe UI',system-ui,sans-serif" font-size="13"
-              font-weight="700" fill="#F27321" opacity="0">269 commits
+      </g>
+      <g transform="translate(0,222)">
+        <text x="40" y="0" font-family="'Segoe UI',system-ui,sans-serif" font-size="14"
+              font-weight="600" fill="#FAFAF8">Painel Tráfego JM</text>
+        <text x="800" y="0" text-anchor="end" font-family="'Segoe UI',system-ui,sans-serif"
+              font-size="14" font-weight="700" fill="#F27321" opacity="0">269 commits
           <animate attributeName="opacity" from="0" to="1" dur="0.5s" begin="1.0499999999999998s" fill="freeze"/>
         </text>
-      </g>
-      <g transform="translate(40,206)">
-        <text x="0" y="0" font-family="'Segoe UI',system-ui,sans-serif" font-size="13"
-              font-weight="600" fill="#FAFAF8">InvestImob</text>
-        <rect x="200" y="-12" width="500" height="14" rx="3" fill="#21262D"/>
-        <rect x="200" y="-12" width="0" height="14" rx="3" fill="#F27321">
-          <animate attributeName="width" from="0" to="203.01418439716312" dur="0.9s"
-                   begin="0.8999999999999999s" fill="freeze"/>
+        <rect x="40" y="8" width="760" height="12" rx="4" fill="#21262D"/>
+        <rect x="40" y="8" width="0" height="12" rx="4" fill="url(#gBar)">
+          <animate attributeName="width" from="0" to="362.4822695035461" dur="0.9s"
+                   begin="0.75s" fill="freeze"/>
         </rect>
-        <text x="750" y="0" font-family="'Segoe UI',system-ui,sans-serif" font-size="13"
-              font-weight="700" fill="#F27321" opacity="0">229 commits
+      </g>
+      <g transform="translate(0,264)">
+        <text x="40" y="0" font-family="'Segoe UI',system-ui,sans-serif" font-size="14"
+              font-weight="600" fill="#FAFAF8">InvestImob</text>
+        <text x="800" y="0" text-anchor="end" font-family="'Segoe UI',system-ui,sans-serif"
+              font-size="14" font-weight="700" fill="#F27321" opacity="0">229 commits
           <animate attributeName="opacity" from="0" to="1" dur="0.5s" begin="1.2s" fill="freeze"/>
         </text>
+        <rect x="40" y="8" width="760" height="12" rx="4" fill="#21262D"/>
+        <rect x="40" y="8" width="0" height="12" rx="4" fill="url(#gBar)">
+          <animate attributeName="width" from="0" to="308.58156028368796" dur="0.9s"
+                   begin="0.8999999999999999s" fill="freeze"/>
+        </rect>
       </g>
 </svg>

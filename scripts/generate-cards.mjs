@@ -61,6 +61,79 @@ const esc = (s) =>
     .replace(/>/g, "&gt;")
     .replace(/"/g, "&quot;");
 
+// Busca o calendário de contribuições via GraphQL (para o card de streak).
+// O REST não expõe o contribution calendar; o GraphQL sim.
+async function fetchContributions() {
+  const query = `query($login:String!){
+    user(login:$login){
+      contributionsCollection{
+        contributionCalendar{
+          totalContributions
+          weeks{ contributionDays{ date contributionCount } }
+        }
+      }
+    }
+  }`;
+  const res = await fetch("https://api.github.com/graphql", {
+    method: "POST",
+    headers: {
+      Authorization: `bearer ${TOKEN}`,
+      "User-Agent": "johnata-profile-cards",
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({ query, variables: { login: USER } }),
+  });
+  if (!res.ok) return null;
+  const json = await res.json();
+  const cal = json?.data?.user?.contributionsCollection?.contributionCalendar;
+  if (!cal) return null;
+  // achatar todos os dias em ordem cronológica
+  const days = [];
+  for (const w of cal.weeks) for (const d of w.contributionDays) days.push(d);
+  days.sort((a, b) => a.date.localeCompare(b.date));
+  return { total: cal.totalContributions, days };
+}
+
+// Calcula streak atual, maior streak e total a partir dos dias
+function computeStreak(contrib) {
+  if (!contrib || !contrib.days.length) return null;
+  const days = contrib.days;
+  const today = new Date().toISOString().slice(0, 10);
+
+  // maior streak histórica
+  let best = 0, run = 0, bestStart = "", bestEnd = "", runStart = "";
+  for (const d of days) {
+    if (d.contributionCount > 0) {
+      if (run === 0) runStart = d.date;
+      run++;
+      if (run > best) { best = run; bestStart = runStart; bestEnd = d.date; }
+    } else run = 0;
+  }
+
+  // streak atual (conta de trás pra frente; hoje pode ainda não ter commit)
+  let cur = 0, curStart = "";
+  for (let i = days.length - 1; i >= 0; i--) {
+    const d = days[i];
+    if (d.date > today) continue;
+    if (d.contributionCount > 0) { cur++; curStart = d.date; }
+    else if (d.date === today && cur === 0) continue; // hoje ainda sem commit: ok
+    else break;
+  }
+
+  const fmt = (iso) => {
+    if (!iso) return "";
+    const [y, m, dd] = iso.split("-");
+    return `${parseInt(dd)}/${parseInt(m)}/${y}`;
+  };
+  return {
+    total: contrib.total,
+    current: cur,
+    currentSince: fmt(curStart),
+    best,
+    bestRange: bestStart ? `${fmt(bestStart)} — ${fmt(bestEnd)}` : "",
+  };
+}
+
 // ============================================================
 // COLETA DE DADOS REAIS
 // ============================================================
@@ -89,6 +162,9 @@ async function collectData() {
     .sort((a, b) => b[1] - a[1])
     .map(([name, n]) => ({ name, pct: Math.round((n / langTotal) * 100) }));
 
+  const contrib = await fetchContributions();
+  const streak = computeStreak(contrib);
+
   return {
     totalRepos: repos.length,
     privateCount,
@@ -97,6 +173,7 @@ async function collectData() {
     perRepo,
     langList,
     topRepos: perRepo.slice(0, 5),
+    streak,
   };
 }
 
@@ -281,28 +358,35 @@ function cardInstituto(d) {
 // CARD 3 — "RANKING DE PROJETOS" (top repos por commits reais)
 // ============================================================
 function cardRanking(d) {
-  const W = 840, H = 240;
+  const W = 840, H = 300;
   const max = d.topRepos[0]?.commits || 1;
   const nice = { "qg-empresa": "Central de Comando (QG)", trafego: "Painel Tráfego JM",
     Mishyo: "Mishyo", FrotaOS: "FrotaOS", investimob: "InvestImob" };
 
+  // Layout respirado: nome ACIMA da barra, barra ocupa a largura toda.
+  // Cada linha tem 42px de altura. Contagem na ponta direita, alinhada ao nome.
+  const barX = 40;
+  const barW = W - 80;
+  const rowH = 42;
+  const top = 96;
+
   const rows = d.topRepos
     .map((r, i) => {
-      const y = 78 + i * 32;
-      const w = (r.commits / max) * (W - 340);
+      const y = top + i * rowH;
+      const w = (r.commits / max) * barW;
       return `
-      <g transform="translate(40,${y})">
-        <text x="0" y="0" font-family="'Segoe UI',system-ui,sans-serif" font-size="13"
+      <g transform="translate(0,${y})">
+        <text x="${barX}" y="0" font-family="'Segoe UI',system-ui,sans-serif" font-size="14"
               font-weight="600" fill="${C.cream}">${esc(nice[r.name] || r.name)}</text>
-        <rect x="200" y="-12" width="${W - 340}" height="14" rx="3" fill="${C.line}"/>
-        <rect x="200" y="-12" width="0" height="14" rx="3" fill="${C.terra}">
+        <text x="${W - 40}" y="0" text-anchor="end" font-family="'Segoe UI',system-ui,sans-serif"
+              font-size="14" font-weight="700" fill="${C.terra}" opacity="0">${r.commits.toLocaleString("pt-BR")} commits
+          <animate attributeName="opacity" from="0" to="1" dur="0.5s" begin="${0.6 + i * 0.15}s" fill="freeze"/>
+        </text>
+        <rect x="${barX}" y="8" width="${barW}" height="12" rx="4" fill="${C.line}"/>
+        <rect x="${barX}" y="8" width="0" height="12" rx="4" fill="url(#gBar)">
           <animate attributeName="width" from="0" to="${w}" dur="0.9s"
                    begin="${0.3 + i * 0.15}s" fill="freeze"/>
         </rect>
-        <text x="${W - 90}" y="0" font-family="'Segoe UI',system-ui,sans-serif" font-size="13"
-              font-weight="700" fill="${C.terra}" opacity="0">${r.commits.toLocaleString("pt-BR")} commits
-          <animate attributeName="opacity" from="0" to="1" dur="0.5s" begin="${0.6 + i * 0.15}s" fill="freeze"/>
-        </text>
       </g>`;
     })
     .join("");
@@ -313,14 +397,87 @@ function cardRanking(d) {
       <stop offset="0" stop-color="${C.terra}"/>
       <stop offset="1" stop-color="${C.navy}"/>
     </linearGradient>
+    <linearGradient id="gBar" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="${C.terraDeep}"/>
+      <stop offset="1" stop-color="${C.terra}"/>
+    </linearGradient>
   </defs>
   <rect x="1.5" y="1.5" width="${W - 3}" height="${H - 3}" rx="14"
         fill="${C.ink2}" stroke="url(#gRank)" stroke-width="2"/>
   <text x="40" y="48" font-family="'Segoe UI',system-ui,sans-serif" font-size="20"
         font-weight="800" fill="${C.cream}">Onde a energia foi</text>
-  <text x="40" y="66" font-family="'Segoe UI',system-ui,sans-serif" font-size="12"
+  <text x="40" y="70" font-family="'Segoe UI',system-ui,sans-serif" font-size="12"
         fill="${C.mute}">Top 5 projetos por commits reais — o trabalho que não aparece nos rankings públicos</text>
   ${rows}
+</svg>`;
+}
+
+// ============================================================
+// CARD 4 — "SEQUÊNCIA" (streak próprio, sem depender de serviço externo)
+// ============================================================
+function cardStreak(d) {
+  const W = 840, H = 200;
+  const s = d.streak || { total: 0, current: 0, best: 0, currentSince: "", bestRange: "" };
+
+  // três colunas: total | streak atual (anel de fogo) | maior streak
+  const col = (cx, num, label, sub, color, delay) => `
+    <text x="${cx}" y="96" text-anchor="middle" font-family="'Segoe UI',system-ui,sans-serif"
+          font-size="44" font-weight="800" fill="${color}" opacity="0">${esc(num)}
+      <animate attributeName="opacity" from="0" to="1" dur="0.7s" begin="${delay}s" fill="freeze"/>
+      <animateTransform attributeName="transform" type="translate" from="0 10" to="0 0"
+               dur="0.7s" begin="${delay}s" fill="freeze"/>
+    </text>
+    <text x="${cx}" y="122" text-anchor="middle" font-family="'Segoe UI',system-ui,sans-serif"
+          font-size="13" font-weight="600" fill="${C.cream}" letter-spacing="0.5" opacity="0">${esc(label)}
+      <animate attributeName="opacity" from="0" to="1" dur="0.7s" begin="${delay + 0.15}s" fill="freeze"/>
+    </text>
+    <text x="${cx}" y="142" text-anchor="middle" font-family="'Segoe UI',system-ui,sans-serif"
+          font-size="10" fill="${C.mute}" opacity="0">${esc(sub)}
+      <animate attributeName="opacity" from="0" to="1" dur="0.7s" begin="${delay + 0.25}s" fill="freeze"/>
+    </text>`;
+
+  const cx1 = W / 6, cx2 = W / 2, cx3 = (5 * W) / 6;
+
+  return `<svg width="${W}" height="${H}" viewBox="0 0 ${W} ${H}" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="gStreak" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="${C.navy}"/>
+      <stop offset="0.5" stop-color="${C.terra}"/>
+      <stop offset="1" stop-color="${C.terraDeep}"/>
+    </linearGradient>
+    <radialGradient id="gFire" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="${C.terra}" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="${C.terra}" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect x="1.5" y="1.5" width="${W - 3}" height="${H - 3}" rx="14"
+        fill="${C.ink2}" stroke="url(#gStreak)" stroke-width="2"/>
+
+  <text x="40" y="42" font-family="'Segoe UI',system-ui,sans-serif" font-size="18"
+        font-weight="800" fill="${C.cream}">🔥 Sequência de contribuições</text>
+
+  <!-- halo de fogo atrás da coluna central (streak atual) -->
+  <circle cx="${cx2}" cy="88" r="70" fill="url(#gFire)">
+    <animate attributeName="opacity" values="0.6;1;0.6" dur="2.5s" repeatCount="indefinite"/>
+  </circle>
+  <!-- anel animado da streak atual -->
+  <circle cx="${cx2}" cy="88" r="58" fill="none" stroke="${C.line}" stroke-width="3"/>
+  <circle cx="${cx2}" cy="88" r="58" fill="none" stroke="${C.terra}" stroke-width="3"
+          stroke-linecap="round" stroke-dasharray="365" stroke-dashoffset="365"
+          transform="rotate(-90 ${cx2} 88)">
+    <animate attributeName="stroke-dashoffset" from="365" to="70" dur="1.2s" begin="0.3s" fill="freeze"/>
+  </circle>
+
+  <!-- divisores verticais -->
+  <line x1="${W / 3}" y1="60" x2="${W / 3}" y2="150" stroke="${C.line}" stroke-width="1"/>
+  <line x1="${(2 * W) / 3}" y1="60" x2="${(2 * W) / 3}" y2="150" stroke="${C.line}" stroke-width="1"/>
+
+  ${col(cx1, s.total.toLocaleString("pt-BR"), "CONTRIBUIÇÕES", "último ano", C.cream, 0.2)}
+  ${col(cx2, s.current + (s.current === 1 ? " dia" : " dias"), "SEQUÊNCIA ATUAL", s.currentSince ? "desde " + s.currentSince : "—", C.terra, 0.5)}
+  ${col(cx3, s.best + (s.best === 1 ? " dia" : " dias"), "MAIOR SEQUÊNCIA", s.bestRange || "—", C.gold, 0.8)}
+
+  <text x="${W / 2}" y="178" text-anchor="middle" font-family="'Segoe UI',system-ui,sans-serif"
+        font-size="10" fill="${C.mute}">Calculado a partir de todos os repositórios — inclusive os privados</text>
 </svg>`;
 }
 
@@ -340,6 +497,7 @@ async function main() {
   writeFileSync("cards/central-comando.svg", cardStats(d));
   writeFileSync("cards/instituto.svg", cardInstituto(d));
   writeFileSync("cards/ranking.svg", cardRanking(d));
+  writeFileSync("cards/sequencia.svg", cardStreak(d));
 
   // snapshot JSON (para debug / futuro uso)
   writeFileSync("cards/data.json", JSON.stringify(d, null, 2));

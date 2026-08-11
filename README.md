@@ -177,7 +177,7 @@ Corretores veem campanhas, leads e resultados do Meta Ads num painel limpo e exc
 
 <div align="center">
 
-<img width="98%" src="https://streak-stats.demolab.com?user=JohnataMoreira&theme=tokyonight&hide_border=true&background=0D1117&ring=F27321&fire=C45A10&currStreakLabel=F27321&sideLabels=FAFAF8&dates=8B949E&sideNums=F27321&currStreakNum=FAFAF8&border_radius=12&locale=pt_BR&date_format=j/n/Y" alt="Sequência de contribuições"/>
+<img width="98%" src="https://raw.githubusercontent.com/JohnataMoreira/johnatamoreira/output/sequencia.svg" alt="Sequência de contribuições"/>
 
 <br/>
 
