@@ -207,7 +207,7 @@ Corretores veem campanhas, leads e resultados do Meta Ads num painel limpo e exc
 [![Site](https://img.shields.io/badge/Site%20Pessoal-johnatamoreira.com.br-1A3D6E?style=for-the-badge&logo=googlechrome&logoColor=white)](https://johnatamoreira.com.br)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Johnata%20Moreira-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/eujohnatamoreira)
 [![Instagram](https://img.shields.io/badge/Instagram-@johnatavinicius-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://www.instagram.com/johnatavinicius)
-[![WhatsApp](https://img.shields.io/badge/WhatsApp-J%26JL%20Tecnologia-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](https://wa.me/5531975693311)
+[![WhatsApp](https://img.shields.io/badge/WhatsApp-J%26JL%20Tecnologia-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](https://wa.me/553192006816)
 
 </div>
 
