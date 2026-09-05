@@ -1,3 +1,4 @@
 node_modules/
 cards/*.png
 cards/data.json
+.DS_Store
