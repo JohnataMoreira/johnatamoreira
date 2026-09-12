@@ -1,0 +1,139 @@
+<svg width="840" height="260" viewBox="0 0 840 260" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="gStroke" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1A3D6E"/>
+      <stop offset="0.5" stop-color="#F27321"/>
+      <stop offset="1" stop-color="#C45A10"/>
+    </linearGradient>
+    <linearGradient id="gGlow" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#F27321" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#F27321" stop-opacity="0.6"/>
+      <stop offset="1" stop-color="#F27321" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect x="1.5" y="1.5" width="837" height="257" rx="14"
+        fill="#161B22" stroke="url(#gStroke)" stroke-width="2"/>
+  <!-- linha superior animada -->
+  <rect x="20" y="14" width="800" height="2" fill="url(#gGlow)">
+    <animate attributeName="opacity" values="0.3;1;0.3" dur="3s" repeatCount="indefinite"/>
+  </rect>
+  <!-- título -->
+  <text x="40" y="52" font-family="'Segoe UI',system-ui,sans-serif" font-size="20"
+        font-weight="800" fill="#FAFAF8">Central de Comando
+    <tspan fill="#F27321"> · dados reais</tspan></text>
+  <text x="40" y="72" font-family="'Segoe UI',system-ui,sans-serif" font-size="12"
+        fill="#8B949E">Inclui 11 repositórios privados que serviços públicos não enxergam</text>
+
+  
+    <g transform="translate(40,130)">
+      <text x="0" y="0" font-family="'Segoe UI',system-ui,sans-serif" font-size="42"
+            font-weight="800" fill="#F27321" opacity="0">
+        3.318
+        <animate attributeName="opacity" from="0" to="1" dur="0.8s"
+                 begin="0.2s" fill="freeze"/>
+        <animateTransform attributeName="transform" type="translate"
+                 from="0 12" to="0 0" dur="0.8s" begin="0.2s" fill="freeze"/>
+      </text>
+      <text x="2" y="26" font-family="'Segoe UI',system-ui,sans-serif" font-size="13"
+            font-weight="500" fill="#8B949E" letter-spacing="1.5" opacity="0">
+        COMMITS REAIS
+        <animate attributeName="opacity" from="0" to="1" dur="0.8s"
+                 begin="0.35s" fill="freeze"/>
+      </text>
+    </g>
+  
+    <g transform="translate(240,130)">
+      <text x="0" y="0" font-family="'Segoe UI',system-ui,sans-serif" font-size="42"
+            font-weight="800" fill="#FAFAF8" opacity="0">
+        17
+        <animate attributeName="opacity" from="0" to="1" dur="0.8s"
+                 begin="0.4s" fill="freeze"/>
+        <animateTransform attributeName="transform" type="translate"
+                 from="0 12" to="0 0" dur="0.8s" begin="0.4s" fill="freeze"/>
+      </text>
+      <text x="2" y="26" font-family="'Segoe UI',system-ui,sans-serif" font-size="13"
+            font-weight="500" fill="#8B949E" letter-spacing="1.5" opacity="0">
+        REPOSITÓRIOS
+        <animate attributeName="opacity" from="0" to="1" dur="0.8s"
+                 begin="0.55s" fill="freeze"/>
+      </text>
+    </g>
+  
+    <g transform="translate(410,130)">
+      <text x="0" y="0" font-family="'Segoe UI',system-ui,sans-serif" font-size="42"
+            font-weight="800" fill="#4A86E8" opacity="0">
+        14
+        <animate attributeName="opacity" from="0" to="1" dur="0.8s"
+                 begin="0.6s" fill="freeze"/>
+        <animateTransform attributeName="transform" type="translate"
+                 from="0 12" to="0 0" dur="0.8s" begin="0.6s" fill="freeze"/>
+      </text>
+      <text x="2" y="26" font-family="'Segoe UI',system-ui,sans-serif" font-size="13"
+            font-weight="500" fill="#8B949E" letter-spacing="1.5" opacity="0">
+        PRIVADOS
+        <animate attributeName="opacity" from="0" to="1" dur="0.8s"
+                 begin="0.75s" fill="freeze"/>
+      </text>
+    </g>
+  
+    <g transform="translate(560,130)">
+      <text x="0" y="0" font-family="'Segoe UI',system-ui,sans-serif" font-size="42"
+            font-weight="800" fill="#25D366" opacity="0">
+        5
+        <animate attributeName="opacity" from="0" to="1" dur="0.8s"
+                 begin="0.8s" fill="freeze"/>
+        <animateTransform attributeName="transform" type="translate"
+                 from="0 12" to="0 0" dur="0.8s" begin="0.8s" fill="freeze"/>
+      </text>
+      <text x="2" y="26" font-family="'Segoe UI',system-ui,sans-serif" font-size="13"
+            font-weight="500" fill="#8B949E" letter-spacing="1.5" opacity="0">
+        LINGUAGENS
+        <animate attributeName="opacity" from="0" to="1" dur="0.8s"
+                 begin="0.9500000000000001s" fill="freeze"/>
+      </text>
+    </g>
+  
+    <g transform="translate(700,130)">
+      <text x="0" y="0" font-family="'Segoe UI',system-ui,sans-serif" font-size="42"
+            font-weight="800" fill="#FFD700" opacity="0">
+        6
+        <animate attributeName="opacity" from="0" to="1" dur="0.8s"
+                 begin="1s" fill="freeze"/>
+        <animateTransform attributeName="transform" type="translate"
+                 from="0 12" to="0 0" dur="0.8s" begin="1s" fill="freeze"/>
+      </text>
+      <text x="2" y="26" font-family="'Segoe UI',system-ui,sans-serif" font-size="13"
+            font-weight="500" fill="#8B949E" letter-spacing="1.5" opacity="0">
+        PRODUTOS
+        <animate attributeName="opacity" from="0" to="1" dur="0.8s"
+                 begin="1.15s" fill="freeze"/>
+      </text>
+    </g>
+
+  <!-- barra de linguagens -->
+  <rect x="40" y="200" width="760" height="10" rx="2" fill="#21262D"/>
+  <rect x="40" y="200" width="410.40000000000003" height="10" rx="2"
+        fill="#3178C6" opacity="0">
+        <animate attributeName="opacity" from="0" to="0.95" dur="0.6s" begin="1.4s" fill="freeze"/>
+        <animate attributeName="width" from="0" to="410.40000000000003" dur="0.9s" begin="1.4s" fill="freeze"/>
+      </rect><rect x="453.40000000000003" y="200" width="114" height="10" rx="2"
+        fill="#F7DF1E" opacity="0">
+        <animate attributeName="opacity" from="0" to="0.95" dur="0.6s" begin="1.4s" fill="freeze"/>
+        <animate attributeName="width" from="0" to="114" dur="0.9s" begin="1.4s" fill="freeze"/>
+      </rect><rect x="570.4000000000001" y="200" width="114" height="10" rx="2"
+        fill="#F27321" opacity="0">
+        <animate attributeName="opacity" from="0" to="0.95" dur="0.6s" begin="1.4s" fill="freeze"/>
+        <animate attributeName="width" from="0" to="114" dur="0.9s" begin="1.4s" fill="freeze"/>
+      </rect><rect x="687.4000000000001" y="200" width="60.800000000000004" height="10" rx="2"
+        fill="#F27321" opacity="0">
+        <animate attributeName="opacity" from="0" to="0.95" dur="0.6s" begin="1.4s" fill="freeze"/>
+        <animate attributeName="width" from="0" to="60.800000000000004" dur="0.9s" begin="1.4s" fill="freeze"/>
+      </rect><rect x="751.2" y="200" width="60.800000000000004" height="10" rx="2"
+        fill="#02569B" opacity="0">
+        <animate attributeName="opacity" from="0" to="0.95" dur="0.6s" begin="1.4s" fill="freeze"/>
+        <animate attributeName="width" from="0" to="60.800000000000004" dur="0.9s" begin="1.4s" fill="freeze"/>
+      </rect>
+  <text x="40" y="232" font-family="'Segoe UI',system-ui,sans-serif" font-size="12">
+    <tspan fill="#8B949E">TypeScript 54%</tspan><tspan fill="#30363D">  •  </tspan><tspan fill="#8B949E">JavaScript 15%</tspan><tspan fill="#30363D">  •  </tspan><tspan fill="#8B949E">HTML 15%</tspan><tspan fill="#30363D">  •  </tspan><tspan fill="#8B949E">CSS 8%</tspan><tspan fill="#30363D">  •  </tspan><tspan fill="#8B949E">Dart 8%</tspan>
+  </text>
+</svg>
