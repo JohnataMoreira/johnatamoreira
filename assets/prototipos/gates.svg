@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 300" width="920" height="300" role="img" aria-label="Como uma entrega chega à produção: especificação, execução por IA, prova, auditoria por outra IA, decisão humana e deploy.">
+<style>.bg{fill:#0D1117}.bd{fill:#30363D}.nf{fill:#161B22}.ns{fill:#3D444D}.tt{fill:#E6EDF3}.st{fill:#8B949E}.ln{fill:#30363D}.gh{fill:#8B949E}.bd{stroke:#30363D}.ns{stroke:#3D444D}.ln{stroke:#30363D}@media (prefers-color-scheme: light){.bg{fill:#FFFFFF}.bd{fill:#D0D7DE}.nf{fill:#F6F8FA}.ns{fill:#C9D1D9}.tt{fill:#1F2328}.st{fill:#57606A}.ln{fill:#D0D7DE}.gh{fill:#57606A}.bd{stroke:#D0D7DE}.ns{stroke:#C9D1D9}.ln{stroke:#D0D7DE}}</style>
+<rect class="bg bd" x="1" y="1" width="918" height="298" rx="16" fill="#0D1117" stroke="#30363D" stroke-width="1.5"/>
+<text class="tt" x="36" y="50" font-family="'Segoe UI',system-ui,-apple-system,sans-serif" font-size="22" font-weight="700" fill="#E6EDF3">Como uma entrega chega à produção</text>
+<text class="st" x="36" y="76" font-family="'Segoe UI',system-ui,-apple-system,sans-serif" font-size="14" fill="#8B949E">Nada vai ao ar sem passar por três gates. Cada gate exige prova, não opinião.</text>
+<line class="ln" x1="90" y1="165" x2="830" y2="165" stroke="#30363D" stroke-width="3" stroke-linecap="round"/>
+<circle class="nf ns" cx="90" cy="165" r="30" fill="#161B22" stroke="#3D444D" stroke-width="2"/>
+<circle cx="90" cy="165" r="30" fill="#F27321" fill-opacity="0.18" stroke="#F27321" stroke-width="3" opacity="0"><animate attributeName="opacity" dur="12s" repeatCount="indefinite" keyTimes="0;0.000;0.030;0.150;1" values="0;0;1;0.3;0"/></circle>
+<text class="tt" x="90" y="170" text-anchor="middle" font-family="'Segoe UI',system-ui,-apple-system,sans-serif" font-size="14" font-weight="700" fill="#E6EDF3">G1</text>
+<text x="90" y="223" text-anchor="middle" font-family="'Segoe UI',system-ui,-apple-system,sans-serif" font-size="11" font-weight="700" letter-spacing="1.4" fill="#F27321">GATE 1</text>
+<text class="tt" x="90" y="243" text-anchor="middle" font-family="'Segoe UI',system-ui,-apple-system,sans-serif" font-size="14" font-weight="600" fill="#E6EDF3">Especificação</text>
+<text class="st" x="90" y="261" text-anchor="middle" font-family="'Segoe UI',system-ui,-apple-system,sans-serif" font-size="12" fill="#8B949E">critérios EARS</text>
+<circle class="nf ns" cx="238" cy="165" r="30" fill="#161B22" stroke="#3D444D" stroke-width="2"/>
+<circle cx="238" cy="165" r="30" fill="#F27321" fill-opacity="0.18" stroke="#F27321" stroke-width="3" opacity="0"><animate attributeName="opacity" dur="12s" repeatCount="indefinite" keyTimes="0;0.170;0.200;0.320;1" values="0;0;1;0.3;0"/></circle>
+<text class="tt" x="238" y="170" text-anchor="middle" font-family="'Segoe UI',system-ui,-apple-system,sans-serif" font-size="14" font-weight="700" fill="#E6EDF3">IA</text>
+<text x="238" y="223" text-anchor="middle" font-family="'Segoe UI',system-ui,-apple-system,sans-serif" font-size="11" font-weight="700" letter-spacing="1.4" fill="#F27321">EXECUÇÃO</text>
+<text class="tt" x="238" y="243" text-anchor="middle" font-family="'Segoe UI',system-ui,-apple-system,sans-serif" font-size="14" font-weight="600" fill="#E6EDF3">IA em branch</text>
+<text class="st" x="238" y="261" text-anchor="middle" font-family="'Segoe UI',system-ui,-apple-system,sans-serif" font-size="12" fill="#8B949E">worktree isolado</text>
+<circle class="nf ns" cx="386" cy="165" r="30" fill="#161B22" stroke="#3D444D" stroke-width="2"/>
+<circle cx="386" cy="165" r="30" fill="#F27321" fill-opacity="0.18" stroke="#F27321" stroke-width="3" opacity="0"><animate attributeName="opacity" dur="12s" repeatCount="indefinite" keyTimes="0;0.340;0.370;0.490;1" values="0;0;1;0.3;0"/></circle>
+<text class="tt" x="386" y="170" text-anchor="middle" font-family="'Segoe UI',system-ui,-apple-system,sans-serif" font-size="14" font-weight="700" fill="#E6EDF3">G2</text>
+<text x="386" y="223" text-anchor="middle" font-family="'Segoe UI',system-ui,-apple-system,sans-serif" font-size="11" font-weight="700" letter-spacing="1.4" fill="#F27321">GATE 2</text>
+<text class="tt" x="386" y="243" text-anchor="middle" font-family="'Segoe UI',system-ui,-apple-system,sans-serif" font-size="14" font-weight="600" fill="#E6EDF3">Prova</text>
+<text class="st" x="386" y="261" text-anchor="middle" font-family="'Segoe UI',system-ui,-apple-system,sans-serif" font-size="12" fill="#8B949E">testes · CI · E2E</text>
+<circle class="nf ns" cx="534" cy="165" r="30" fill="#161B22" stroke="#3D444D" stroke-width="2"/>
+<circle cx="534" cy="165" r="30" fill="#F27321" fill-opacity="0.18" stroke="#F27321" stroke-width="3" opacity="0"><animate attributeName="opacity" dur="12s" repeatCount="indefinite" keyTimes="0;0.510;0.540;0.660;1" values="0;0;1;0.3;0"/></circle>
+<text class="tt" x="534" y="170" text-anchor="middle" font-family="'Segoe UI',system-ui,-apple-system,sans-serif" font-size="14" font-weight="700" fill="#E6EDF3">AUD</text>
+<text x="534" y="223" text-anchor="middle" font-family="'Segoe UI',system-ui,-apple-system,sans-serif" font-size="11" font-weight="700" letter-spacing="1.4" fill="#F27321">AUDITORIA</text>
+<text class="tt" x="534" y="243" text-anchor="middle" font-family="'Segoe UI',system-ui,-apple-system,sans-serif" font-size="14" font-weight="600" fill="#E6EDF3">Outra IA</text>
+<text class="st" x="534" y="261" text-anchor="middle" font-family="'Segoe UI',system-ui,-apple-system,sans-serif" font-size="12" fill="#8B949E">segurança crítica</text>
+<circle class="nf ns" cx="682" cy="165" r="30" fill="#161B22" stroke="#3D444D" stroke-width="2"/>
+<circle cx="682" cy="165" r="30" fill="#F27321" fill-opacity="0.18" stroke="#F27321" stroke-width="3" opacity="0"><animate attributeName="opacity" dur="12s" repeatCount="indefinite" keyTimes="0;0.680;0.710;0.830;1" values="0;0;1;0.3;0"/></circle>
+<text class="tt" x="682" y="170" text-anchor="middle" font-family="'Segoe UI',system-ui,-apple-system,sans-serif" font-size="14" font-weight="700" fill="#E6EDF3">G3</text>
+<text x="682" y="223" text-anchor="middle" font-family="'Segoe UI',system-ui,-apple-system,sans-serif" font-size="11" font-weight="700" letter-spacing="1.4" fill="#F27321">GATE 3</text>
+<text class="tt" x="682" y="243" text-anchor="middle" font-family="'Segoe UI',system-ui,-apple-system,sans-serif" font-size="14" font-weight="600" fill="#E6EDF3">Decisão humana</text>
+<text class="st" x="682" y="261" text-anchor="middle" font-family="'Segoe UI',system-ui,-apple-system,sans-serif" font-size="12" fill="#8B949E">eu leio e aprovo</text>
+<circle class="nf ns" cx="830" cy="165" r="30" fill="#161B22" stroke="#3D444D" stroke-width="2"/>
+<circle cx="830" cy="165" r="30" fill="#F27321" fill-opacity="0.18" stroke="#F27321" stroke-width="3" opacity="0"><animate attributeName="opacity" dur="12s" repeatCount="indefinite" keyTimes="0;0.850;0.880;1.000;1" values="0;0;1;0.3;0"/></circle>
+<text class="tt" x="830" y="170" text-anchor="middle" font-family="'Segoe UI',system-ui,-apple-system,sans-serif" font-size="14" font-weight="700" fill="#E6EDF3">OK</text>
+<text x="830" y="223" text-anchor="middle" font-family="'Segoe UI',system-ui,-apple-system,sans-serif" font-size="11" font-weight="700" letter-spacing="1.4" fill="#F27321">PRODUÇÃO</text>
+<text class="tt" x="830" y="243" text-anchor="middle" font-family="'Segoe UI',system-ui,-apple-system,sans-serif" font-size="14" font-weight="600" fill="#E6EDF3">Deploy</text>
+<text class="st" x="830" y="261" text-anchor="middle" font-family="'Segoe UI',system-ui,-apple-system,sans-serif" font-size="12" fill="#8B949E">com rollback pronto</text>
+<circle r="8" fill="#FFD28A" stroke="#F27321" stroke-width="3"><animateMotion dur="12s" repeatCount="indefinite" calcMode="linear" keyTimes="0;0.85;1" keyPoints="0;1;1" path="M90,165 L830,165"/><animate attributeName="opacity" dur="12s" repeatCount="indefinite" keyTimes="0;0.02;0.85;0.9;1" values="0;1;1;0;0"/></circle>
+</svg>
