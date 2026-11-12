@@ -62,3 +62,7 @@ Despacho completo em .agents/propostas/G1_PERFIL-001.md (worktree ../perfil-gith
 > Arquivos fora da lista de saída tocados:
 > Divergências:
 > Lição nova:
+
+## PERFIL-002 — Fase 2 do perfil: artigos via RSS, "Quando eu construo", "Mishyo no ar", auditoria cruzada
+**Status:** PENDENTE (bloqueada por PERFIL-001 Gate 2; item de artigos depende também do merge do SITE-007)
+Escopo em `.agents/propostas/G1_PERFIL-001.md` § Fase 2. Não despachar antes do Gate 2 da PERFIL-001.
