@@ -2,6 +2,9 @@
 
 Teste de renderização no GitHub: animação, modo claro/escuro e celular.
 
+## Cabeçalho
+<img src="assets/prototipos/header.svg" alt="Johnata Moreira, Full-stack e Product Engineer" width="100%">
+
 ## Ciclo de gates
 <img src="assets/prototipos/gates.svg" alt="Como uma entrega chega à produção" width="100%">
 
