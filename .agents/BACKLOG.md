@@ -8,7 +8,7 @@
 
 ## PERFIL-001 — Reposicionar README do perfil (PT+EN), projects.json e cards proprios
 
-**Status:** EM REVISÃO — GATE 2
+**Status:** GATE 2 APROVADO — AGUARDA GATE 3
 **Max iterações:** 3
 **Adicionada:** 2026-11-09 (via qg-comando)
 
@@ -56,9 +56,9 @@ Despacho completo em .agents/propostas/G1_PERFIL-001.md (worktree ../perfil-gith
 
 ### Relatório do Antigravity (preencher ao concluir)
 
-> Status final: implementação concluída na branch `feat/reposicionamento-readme`; aguarda Gate 2.
-> Commits: a definir após o commit de entrega.
-> Critérios EARS validados: README, `readme:check`, visuais e falha sem token validados localmente; geração autenticada pendente.
+> Status final: implementação concluída; Gate 2 aprovado no GitHub Actions; aguarda Gate 3.
+> Commits: `b54bec5aff7537f49b9f5c3aad32fe8093a7e0da`; run autenticado `43485358251`.
+> Critérios EARS validados: README, `readme:check`, visuais, XML, grep, SHA das actions, falha sem token e geração autenticada no workflow; todos verdes.
 > Arquivos fora da lista de saída tocados: nenhum intencionalmente.
-> Divergências: publicação da branch `output` depende do workflow autenticado.
-> Lição nova: a geração local de visuais depende de `cards/data.json`, produzido pelo gerador autenticado.
+> Divergências: revisão visual de Gate 3 ainda pendente; merge não executado.
+> Lição nova: `CARDS_TOKEN` deve permanecer somente no secret do workflow; o Gate 2 foi executado via dispatch para não expor credencial local.

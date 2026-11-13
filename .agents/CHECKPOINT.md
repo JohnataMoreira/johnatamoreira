@@ -1,17 +1,16 @@
 # CHECKPOINT — perfil-github
-> Atualizado: 13/11/2026. PERFIL-001 executada na branch `feat/reposicionamento-readme`.
+> Atualizado: 13/11/2026. PERFIL-001 executada e Gate 2 aprovado na branch `feat/reposicionamento-readme`.
 ## Estado
 - `main` permanece intocada.
 - README PT/EN, `projects.json`, `content.json`, geradores próprios e workflow foram atualizados.
-- A branch está pronta para revisão do Gate 2; não houve merge nem publicação.
+- Gate 2 aprovado no GitHub Actions; não houve merge na `main`.
 ## Provas locais
 - `npm run readme` e `npm run readme:check`: verdes.
 - `npm run visuals`: seis SVGs próprios gerados, cada um abaixo de 40 KB.
 - `npm run generate` sem token: falha com exit 1 sem criar card parcial.
-- `xmllint` e grep final ainda devem ser executados no Gate 2 com a geração autenticada.
+- Run autenticado `43485358251` (commit `b54bec5`) concluiu com `success`; job `gerar` e todas as etapas ficaram verdes.
 ## Pendências
-- Rodar o gerador com `CARDS_TOKEN` fine-grained no ambiente do workflow.
-- Validar os READMEs renderizados em desktop/mobile, claro/escuro.
-- Conferir actions e secrets no Gate 2; Gate 3 e merge são do Claude.
+- Gate 3: validar os READMEs renderizados em desktop/mobile, claro/escuro.
+- Gate 3 e merge são do Claude; `main` permanece intocada.
 ## Pós-merge
 - Atualizar descrição, tópicos e homepage do perfil; remover qualquer artefato solto remanescente.
