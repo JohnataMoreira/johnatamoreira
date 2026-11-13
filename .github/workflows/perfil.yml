@@ -1,17 +1,17 @@
-name: Gerar Perfil (cards + snake)
-
-# Gera os cards SVG dinâmicos (dados reais dos repos privados) E a animação
-# do snake, publicando tudo junto na branch `output`. Um workflow só evita
-# que um sobrescreva o outro na branch de saída.
+name: Gerar Perfil
 
 on:
   schedule:
-    - cron: "0 6 * * *"    # todo dia às 6h UTC (~3h BRT)
-  workflow_dispatch:        # botão de rodar manual
+    - cron: "0 6 * * *"
+  workflow_dispatch:
   push:
     branches: [main]
     paths:
-      - "scripts/generate-cards.mjs"
+      - "README.md"
+      - "README.en.md"
+      - "projects.json"
+      - "content.json"
+      - "scripts/**"
       - ".github/workflows/perfil.yml"
 
 jobs:
@@ -20,37 +20,33 @@ jobs:
       contents: write
     runs-on: ubuntu-latest
     timeout-minutes: 10
-
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
-
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
       - name: Setup Node
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
         with:
           node-version: "20"
-
-      - name: Gerar cards SVG (dados reais via token)
+      - name: Gerar README, cards e visuais
         env:
           GH_TOKEN: ${{ secrets.CARDS_TOKEN }}
         run: |
-          node scripts/generate-cards.mjs
+          npm run readme
+          npm run readme:check
+          npm run generate
+          npm run visuals
           mkdir -p dist
           cp cards/*.svg dist/
-
-      - name: Gerar animação Snake
-        uses: Platane/snk/svg-only@v3
-        with:
-          github_user_name: ${{ github.repository_owner }}
-          outputs: |
-            dist/github-contribution-grid-snake.svg?color_snake=%23F27321&color_dots=%23161B22,%23593012,%23A34410,%23C45A10,%23F27321
-            dist/github-contribution-grid-snake-dark.svg?color_snake=%23F27321&color_dots=%23161B22,%23593012,%23A34410,%23C45A10,%23F27321
-
-      - name: Publicar tudo na branch output
-        uses: crazy-max/ghaction-github-pages@v4
-        with:
-          target_branch: output
-          build_dir: dist
-          keep_history: false
+      - name: Publicar branch output
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git fetch origin output:output || true
+          git checkout --orphan perfil-output
+          git rm -rf . >/dev/null 2>&1 || true
+          cp -R dist/. .
+          git add .
+          git commit -m "chore: atualizar assets do perfil"
+          git push --force origin HEAD:output

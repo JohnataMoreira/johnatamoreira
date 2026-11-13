@@ -1,4 +1,5 @@
-node_modules/
-cards/*.png
+cards/*.svg
 cards/data.json
-.DS_Store
+dist/
+node_modules/
+.env

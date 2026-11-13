@@ -1,10 +1,13 @@
 {
   "name": "johnata-profile-cards",
-  "version": "1.0.0",
-  "description": "Gerador de cards SVG dinâmicos para o perfil GitHub — dados reais dos repos privados + narrativa do Instituto Jesus Lindão",
+  "version": "2.0.0",
+  "private": true,
+  "description": "Geradores próprios para o perfil GitHub de Johnata Moreira.",
   "type": "module",
   "scripts": {
-    "generate": "node scripts/generate-cards.mjs"
-  },
-  "license": "MIT"
+    "generate": "node scripts/generate-cards.mjs",
+    "readme": "node scripts/render-readme.mjs",
+    "readme:check": "node scripts/render-readme.mjs --check",
+    "visuals": "node scripts/visuals/index.mjs"
+  }
 }

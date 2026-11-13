@@ -1,10 +1,17 @@
-# CHECKPOINT — perfil-github (README do perfil JohnataMoreira + gerador de cards)
-> Atualizado: 09/11/2026 (Claude, Desktop). Teto ~200 linhas.
+# CHECKPOINT — perfil-github
+> Atualizado: 13/11/2026. PERFIL-001 executada na branch `feat/reposicionamento-readme`.
 ## Estado
-- main: hotfix `44664fe` (WhatsApp 5531975693311 correto; CNPJ removido do README). Resto do README/cards/workflow ainda no formato antigo (FrotaOS, Docker, n8n, serviços de terceiros).
-- PERFIL-001 (Gate 1 despachado, **AGUARDANDO o Johnata acionar o Antigravity**): `.agents/propostas/G1_PERFIL-001.md`, branch `feat/reposicionamento-readme`, worktree `../perfil-github-reposicionamento`. Regista README PT+EN, `projects.json`, cards próprios, actions por SHA.
-- Contexto/decisões: `~/Projetos/QG/docs/historico/SESSAO_2026-11-06_reposicionamento_github_e_site.md`.
-## Pendências do Johnata
-- Acionar o Antigravity; conferir que `CARDS_TOKEN` é fine-grained (Contents + Metadata, só leitura, com validade); Gate 3 lendo os READMEs renderizados.
-## Pós-merge (Claude)
-- `gh repo edit` (description, topics, homepage); remover `.webp` solto; repo-vitrine público só com gitleaks + licença restritiva (tarefa futura).
+- `main` permanece intocada.
+- README PT/EN, `projects.json`, `content.json`, geradores próprios e workflow foram atualizados.
+- A branch está pronta para revisão do Gate 2; não houve merge nem publicação.
+## Provas locais
+- `npm run readme` e `npm run readme:check`: verdes.
+- `npm run visuals`: seis SVGs próprios gerados, cada um abaixo de 40 KB.
+- `npm run generate` sem token: falha com exit 1 sem criar card parcial.
+- `xmllint` e grep final ainda devem ser executados no Gate 2 com a geração autenticada.
+## Pendências
+- Rodar o gerador com `CARDS_TOKEN` fine-grained no ambiente do workflow.
+- Validar os READMEs renderizados em desktop/mobile, claro/escuro.
+- Conferir actions e secrets no Gate 2; Gate 3 e merge são do Claude.
+## Pós-merge
+- Atualizar descrição, tópicos e homepage do perfil; remover qualquer artefato solto remanescente.
