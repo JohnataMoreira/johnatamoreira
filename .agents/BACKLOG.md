@@ -8,7 +8,7 @@
 
 ## PERFIL-001 — Reposicionar README do perfil (PT+EN), projects.json e cards proprios
 
-**Status:** GATE 2 APROVADO — AGUARDA GATE 3
+**Status:** EM REVISÃO — GATE 2
 **Max iterações:** 3
 **Adicionada:** 2026-11-09 (via qg-comando)
 
@@ -40,13 +40,17 @@ Despacho completo em .agents/propostas/G1_PERFIL-001.md (worktree ../perfil-gith
 | # | Tipo | Critério |
 |---|------|----------|
 | 1 | Resultado | QUANDO o grep de termos proibidos (CNPJ, numeros antigos, projetos removidos, Docker/n8n/React Native, servicos de terceiros) rodar nos READMEs, projects.json, scripts e workflow, O SISTEMA DEVE retornar 0 linhas |
-| 2 | Resultado | TODO link de WhatsApp DEVE ser https://wa.me/5531975693311 |
+| 2 | Resultado | TODO link de WhatsApp DEVE ser https://wa.me/5531920060816 |
 | 3 | Resultado | npm run readme:check DEVE sair 0 apos npm run readme e sair 1 se projects.json mudar sem regenerar |
 | 4 | Resultado | SEM GH_TOKEN, generate-cards.mjs DEVE sair 1 sem criar SVG parcial |
 | 5 | Resultado | Os SVGs NAO DEVEM conter nome de repo privado nem projetos removidos |
 | 6 | Resultado | TODAS as uses do workflow DEVEM ter SHA de 40 caracteres |
 | 7 | Resultado | README.md e README.en.md DEVEM ter as mesmas secoes e fatos; nenhum numero de usuarios do Mishyo |
 | 8 | Resultado | git status limpo; makakoloko.webp fora da raiz; origin/main intocada |
+
+### Atualização T033 v2.1
+- Delta aplicado: WhatsApp `5531920060816`; 16 redes oficiais em PT e EN; `readme:check` valida todas as URLs.
+- A prova autenticada do gerador de cards permanece pendente do Gate 2 do Claude, pois nenhum token foi lido ou criado.
 
 ### Armadilhas conhecidas
 - (nenhum)
@@ -56,9 +60,13 @@ Despacho completo em .agents/propostas/G1_PERFIL-001.md (worktree ../perfil-gith
 
 ### Relatório do Antigravity (preencher ao concluir)
 
-> Status final: implementação concluída; Gate 2 aprovado no GitHub Actions; aguarda Gate 3.
-> Commits: `b54bec5aff7537f49b9f5c3aad32fe8093a7e0da`; run autenticado `43485358251`.
-> Critérios EARS validados: README, `readme:check`, visuais, XML, grep, SHA das actions, falha sem token e geração autenticada no workflow; todos verdes.
-> Arquivos fora da lista de saída tocados: nenhum intencionalmente.
-> Divergências: revisão visual de Gate 3 ainda pendente; merge não executado.
-> Lição nova: `CARDS_TOKEN` deve permanecer somente no secret do workflow; o Gate 2 foi executado via dispatch para não expor credencial local.
+> Status final:
+> Commits:
+> Critérios EARS validados:
+> Arquivos fora da lista de saída tocados:
+> Divergências:
+> Lição nova:
+
+## PERFIL-002 — Fase 2 do perfil: artigos via RSS, "Quando eu construo", "Mishyo no ar", auditoria cruzada
+**Status:** PENDENTE (bloqueada por PERFIL-001 Gate 2; item de artigos depende também do merge do SITE-007)
+Escopo em `.agents/propostas/G1_PERFIL-001.md` § Fase 2. Não despachar antes do Gate 2 da PERFIL-001.

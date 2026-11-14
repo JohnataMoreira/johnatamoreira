@@ -8,7 +8,7 @@
 AI-assisted development, with gates, evidence and audit.
 
 [
-[Site](https://johnatamoreira.com.br) · [LinkedIn](https://www.linkedin.com/in/eujohnatamoreira) · [Mishyo](https://mishyo.com) · [WhatsApp](https://wa.me/5531975693311) · [E-mail](mailto:contato@johnatamoreira.com.br)
+[Site](https://johnatamoreira.com.br) · [LinkedIn](https://www.linkedin.com/in/eujohnatamoreira) · [Mishyo](https://mishyo.com) · [WhatsApp](https://wa.me/5531920060816) · [E-mail](mailto:contato@johnatamoreira.com.br)
 ]
 
 <img src="https://raw.githubusercontent.com/JohnataMoreira/johnatamoreira/output/header.en.svg" width="98%" alt="Johnata Moreira — Product Engineer" />
@@ -63,10 +63,34 @@ The goal is a perpetual **R$ 2 billion** fund. Every sustainable product is a br
 
 
 
+## Official social profiles
+
+### Personal
+- [Instagram @johnatavinicius](https://www.instagram.com/johnatavinicius/)
+- [Threads @johnatavinicius](https://www.threads.com/@johnatavinicius)
+- [Facebook — J&JL Tecnologia](https://www.facebook.com/profile.php?id=61590468124507)
+- [Reddit u/JohnataMoreira](https://www.reddit.com/user/JohnataMoreira/)
+- [LinkedIn /in/eujohnatamoreira](https://www.linkedin.com/in/eujohnatamoreira/)
+- [GitHub @JohnataMoreira](https://github.com/JohnataMoreira)
+- [dev.to @eujohnatamoreira](https://dev.to/eujohnatamoreira)
+
+### Mishyo
+- [Instagram @mishyoapp](https://www.instagram.com/mishyoapp/)
+- [Threads @mishyoapp](https://www.threads.com/@mishyoapp)
+- [TikTok @appmishyo](https://www.tiktok.com/@appmishyo)
+- [Facebook Mishyo](https://www.facebook.com/profile.php?id=61574323453109)
+- [Reddit u/mishyoapp](https://www.reddit.com/user/mishyoapp/)
+
+### ViceRadar
+- [Instagram @viceradarbr](https://www.instagram.com/viceradarbr/)
+- [Threads @viceradarbr](https://www.threads.com/@viceradarbr)
+- [Reddit u/viceradar-br](https://www.reddit.com/user/viceradar-br/)
+- [Facebook ViceRadar](https://www.facebook.com/profile.php?id=61596052877849)
+
 ## Contact
 
 [
-[Site](https://johnatamoreira.com.br) · [LinkedIn](https://www.linkedin.com/in/eujohnatamoreira) · [Mishyo](https://mishyo.com) · [WhatsApp](https://wa.me/5531975693311) · [E-mail](mailto:contato@johnatamoreira.com.br)
+[Site](https://johnatamoreira.com.br) · [LinkedIn](https://www.linkedin.com/in/eujohnatamoreira) · [Mishyo](https://mishyo.com) · [WhatsApp](https://wa.me/5531920060816) · [E-mail](mailto:contato@johnatamoreira.com.br)
 ]
 
 <div align="center">
