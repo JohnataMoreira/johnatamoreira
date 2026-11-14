@@ -9,7 +9,8 @@ Perfil honesto e legível em 30 segundos por recrutador/fundador: "Full-stack / 
 
 ## Dados fixos (não inventar outros)
 - Nome: Johnata Moreira · 40 anos · Belo Horizonte, MG · família MANTIDA (Carol, Ester, Estevão, Elis, como já está) · **CNPJ NÃO aparece** em lugar nenhum.
-- Contato: e-mail `contato@johnatamoreira.com.br` · LinkedIn https://www.linkedin.com/in/eujohnatamoreira · Site https://johnatamoreira.com.br · WhatsApp `https://wa.me/5531975693311` · Telefone +55 31 92006-0816 · Instagram @johnatavinicius (manter).
+- Contato: e-mail `contato@johnatamoreira.com.br` · LinkedIn https://www.linkedin.com/in/eujohnatamoreira · Site https://johnatamoreira.com.br · Telefone e WhatsApp são o MESMO número, o único: +55 31 92006-0816, link `https://wa.me/5531920060816` (decisão do Johnata, 12/11).
+- **Redes oficiais (decisão do Johnata, 12/11):** o README (PT e EN) mostra TODAS, em 3 grupos. Pessoal: Instagram @johnatavinicius (https://www.instagram.com/johnatavinicius/), Threads @johnatavinicius (https://www.threads.com/@johnatavinicius), Facebook página J&JL Tecnologia (https://www.facebook.com/profile.php?id=61590468124507), Reddit u/JohnataMoreira (https://www.reddit.com/user/JohnataMoreira/), LinkedIn (https://www.linkedin.com/in/eujohnatamoreira/), GitHub, dev.to @eujohnatamoreira (https://dev.to/eujohnatamoreira). Mishyo: Instagram @mishyoapp, Threads @mishyoapp, TikTok @appmishyo (https://www.tiktok.com/@appmishyo), Facebook (https://www.facebook.com/profile.php?id=61574323453109), Reddit u/mishyoapp. ViceRadar: Instagram @viceradarbr, Threads @viceradarbr, Reddit u/viceradar-br, Facebook (https://www.facebook.com/profile.php?id=61596052877849). Links no padrão `https://www.instagram.com/<handle>/`, `https://www.threads.com/@<handle>`, `https://www.reddit.com/user/<nome>/`.
 - Mishyo: https://mishyo.com · em produção desde jun/2026 (~5 meses) · 6 meses de desenvolvimento · +385 mil linhas no repositório (+120 mil de código) · "em breve nas lojas oficiais" · **sem contagem de usuários/famílias**.
 - Painel J&JL: https://painel.grupojjl.com.br · atuação como gestor de tráfego · "mais de 15 vendas" · "VGV de mais de R$ 20 milhões" (declaração do Johnata).
 - Como foi construído: IA declarada abertamente (Johnata orquestra e verifica; a IA escreve a maior parte do código); EARS, gates, E2E Playwright contra staging, RLS, auditoria cruzada entre modelos (achou uma escalada de privilégio P0, corrigida), decisões registradas. NÃO escrever "arquiteto", "código de alta precisão", "escrevi 120 mil linhas" nem "minha única habilidade é...".
@@ -43,8 +44,8 @@ d. **Auditoria cruzada (linha do tempo):** só após o case sanitizado do item 7
 ## Critérios (EARS)
 | # | Critério |
 |---|---|
-| 1 | QUANDO `grep -rn -i -E "cnpj|68\.123|553192006816|5531992116627|FrotaOS|Fieldoc|MeuGuia|InvestImob|CRMimob|n8n|Docker|React Native|capsule-render|komarev|typing-svg|activity-graph|profile-summary|1\.800|única habilidade" README.md README.en.md projects.json scripts .github` rodar, O SISTEMA DEVE retornar 0 linhas (exceto o próprio `projects.json` se citar arquivados: então 0). |
-| 2 | TODO link de WhatsApp DEVE ser `https://wa.me/5531975693311`. |
+| 1 | QUANDO `grep -rn -i -E "cnpj|68\.123|5531975693311|97569-3311|5531992116627|FrotaOS|Fieldoc|MeuGuia|InvestImob|CRMimob|n8n|Docker|React Native|capsule-render|komarev|typing-svg|activity-graph|profile-summary|1\.800|única habilidade" README.md README.en.md projects.json scripts .github` rodar, O SISTEMA DEVE retornar 0 linhas (exceto o próprio `projects.json` se citar arquivados: então 0). |
+| 2 | TODO link de WhatsApp DEVE ser `https://wa.me/5531920060816`. |
 | 3 | `npm run readme:check` DEVE sair 0 após `npm run readme`, e sair 1 se `projects.json` mudar sem regenerar. |
 | 4 | `node scripts/generate-cards.mjs` com token válido DEVE gerar 4 SVGs; SEM token DEVE sair 1 sem criar SVG parcial. |
 | 5 | Os SVGs NÃO DEVEM conter nome de repo privado nem os 4 projetos removidos (`grep` nos SVGs gerados). |
@@ -56,6 +57,7 @@ d. **Auditoria cruzada (linha do tempo):** só após o case sanitizado do item 7
 | 11 | QUANDO `totalCommits` mudar em `cards/data.json` e `npm run visuals` rodar, O SISTEMA DEVE mudar o número e a quantidade de tijolos preenchidos em `tijolos.svg`; o SVG NÃO DEVE conter `%`. |
 | 12 | QUANDO `content.json` tiver URL fora dos domínios permitidos, `npm run readme:check` DEVE sair 1; QUANDO estiver vazio, a seção "Escrevo" NÃO DEVE aparecer. |
 | 13 | `README.md` e `README.en.md` DEVEM embutir header, gates e tijolos (versão do idioma) e a prova DEVE incluir o link do branch renderizado para o Johnata ver. |
+| 14 | O README PT e o EN DEVEM trazer os links das 16 redes do bloco "Redes oficiais" (7 pessoais, 5 Mishyo, 4 ViceRadar), cada um com o handle visível; `readme:check` DEVE falhar se faltar algum. |
 
 ## Armadilhas
 - As imagens do README apontam para `raw.githubusercontent.com/.../output/*.svg`: não renomear os arquivos de card sem atualizar os dois READMEs.
