@@ -21,3 +21,9 @@
 - Pendente do Johnata: colar o SP v1.8 no projeto do Manus e autorizar so o repo `johnatamoreira` no conector GitHub dela.
 - Primeiro artigo: terca 17/11. `content.json` nasce vazio (secao "Escrevo" oculta ate la).
 - Site no ar ainda e o antigo (SITE-006 commitada em branch LOCAL cad9e1a, nao enviada ao remoto; SITE-007/008 em `exec/antigravity-site-blog-01`, baseada na main antiga). /blog e /sitemap.xml = 404.
+
+## Atualizacao 12/11/2026 (noite)
+- **G1_PERFIL-001 v2.1:** telefone e WhatsApp unicos +55 31 92006-0816 (`wa.me/5531920060816`); 16 redes oficiais (7 pessoais, 5 Mishyo, 4 ViceRadar) no README PT e EN (criterio 14). T030 no `qg-manus-bridge/inbox/` tem passo 0 (teste de acesso ao GitHub pelo Composio).
+- **Manus SP v1.9** (13/11): Manus em par com Antigravity e Codex em codigo; Composio e o unico canal de conectores.
+- **Site novo** (SITE-009/T032) tem a mesma identidade visual; reusar header, gates e tijolos como SVGs compartilhados quando o site tiver a home nova.
+- Pendente: Johnata aciona o Manus (T030); Gate 2 do Claude com o `CARDS_TOKEN`; `content.json` entra com o 1o artigo (terca 17/11).
