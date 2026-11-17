@@ -14,3 +14,10 @@
 - **Visual aprovado pelo Johnata e validado no GitHub (desktop e celular):** ciclo de gates animado, tijolos do Instituto (1 tijolo = 40 commits, sem % de progresso, legenda "simbolo"), cabecalho com tijolos. Prototipos no branch `feat/reposicionamento-readme` (`assets/prototipos/`, `PROTOTIPO.md`), gerados por `/tmp/proto/*.py` (descartavel; o PERFIL-001 reescreve em Node).
 - **Dado desatualizado:** README publico diz "1.800+ commits"; real = 6.471 (run de 12/11). O gerador deve ler o total, nunca fixar.
 - **Proximo:** Johnata avalia o cabecalho; depois revisar G1_PERFIL-001 incluindo esses 3 visuais e despachar ao Antigravity. Ideias de 2a fase: auditoria cruzada (timeline), quando eu construo (horas dos commits), Mishyo no ar, ultimos artigos.
+
+## Despacho 12/11/2026 (Antigravity indisponivel)
+- PERFIL-001 v2 despachada ao **Manus** como **T030** (`qg-manus-bridge/inbox/2026-11-12-T030-...md`, com adaptacoes: sem worktree, item 7 pulado, sem token, stack so do Mishyo). Manus SP v1.8 ganhou a frente 5 (Codigo). Gate 2 e merge sao do Claude; `CARDS_TOKEN` roda no Gate 2.
+- **T031** (Manus, read-only): auditoria do site, Search Console e consistencia entre canais.
+- Pendente do Johnata: colar o SP v1.8 no projeto do Manus e autorizar so o repo `johnatamoreira` no conector GitHub dela.
+- Primeiro artigo: terca 17/11. `content.json` nasce vazio (secao "Escrevo" oculta ate la).
+- Site no ar ainda e o antigo (SITE-006 commitada em branch LOCAL cad9e1a, nao enviada ao remoto; SITE-007/008 em `exec/antigravity-site-blog-01`, baseada na main antiga). /blog e /sitemap.xml = 404.
