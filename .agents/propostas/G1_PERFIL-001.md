@@ -1,6 +1,7 @@
 # G1 — PERFIL-001 — Reposicionar o README do perfil (PT + EN), fonte única de projetos e cards próprios
 Executor: Antigravity | Worktree: `~/Projetos/Sites e Repos/perfil-github-reposicionamento` | Branch: `feat/reposicionamento-readme` | Máx. iterações: 3
 Contexto: `~/Projetos/QG/docs/historico/SESSAO_2026-11-06_reposicionamento_github_e_site.md` (§ 1, 5, 7, 9). Leia antes. Mesma visão do site (tarefa SITE-006, `Site JohnataMoreira/.agents/propostas/G1_SITE-006.md`): use o MESMO vocabulário e os MESMOS fatos.
+**Revisão v2 (12/11/2026, aprovada pelo Johnata):** acrescenta 3 visuais próprios aprovados e validados no GitHub (desktop e celular), a seção "Escrevo" (artigos e posts) e define a Fase 2. Protótipos de referência: branch `feat/reposicionamento-readme`, commits `70c7cfb` e `15e679c` (`assets/prototipos/*.svg`, `PROTOTIPO.md`). O branch já está no remoto: parta dele (`git fetch` + rebase em `origin/main`).
 NÃO faça: push na main, merge, `gh repo edit`, mexer em secrets/token, reescrever histórico. Entrega = branch com commits + prova; o merge é do Claude após Gate 3 do Johnata.
 
 ## Objetivo
@@ -22,8 +23,22 @@ Perfil honesto e legível em 30 segundos por recrutador/fundador: "Full-stack / 
 3. Cards: `generate-cards.mjs` passa a ler `projects.json`. `cardInstituto` e `cardRanking` mostram só Mishyo e Painel, com nome de exibição (NÃO vazar nome de repo privado). Número de commits: usar o calculado pelo script; remover qualquer "1.800+" e "11 repos privados" fixos do README/typing (texto do README não cita contagem fixa; se citar, vem do `data.json`). Manter `exit(1)` em falha (nunca publicar card quebrado).
 4. Substituir TODO serviço de terceiros que serve imagem: capsule-render (header/footer), readme-typing-svg, komarev (contador — remover), github-readme-activity-graph, github-profile-summary-cards. Troque por SVG gerado no workflow (cards em `cards/` -> branch `output`) ou por texto/markdown. Shields.io: pode permanecer só para badges de stack/contato (ou trocar por texto, a seu critério; registrar a escolha).
 5. Workflow `.github/workflows/perfil.yml`: fixar TODAS as actions por SHA de commit com comentário da versão (checkout, setup-node, Platane/snk, crazy-max/ghaction-github-pages); manter `permissions: contents: write` mínimo; adicionar passo `npm run readme:check`. NÃO alterar nome do secret (`CARDS_TOKEN`).
-6. Higiene: `cards/*.svg` fora da main (adicionar ao `.gitignore` e `git rm --cached`; as imagens do README vêm da branch `output`); `package.json` com `"private": true`; atualizar `.agents/CHECKPOINT.md` e `.agents/BACKLOG.md` (Status + Relatório).
+6. Higiene: `cards/*.svg` fora da main (adicionar ao `.gitignore` e `git rm --cached`; as imagens do README vêm da branch `output`); `package.json` com `"private": true`; remover `PROTOTIPO.md` e `assets/prototipos/` antes da entrega (os protótipos viram os módulos geradores do item 8; ficam no histórico do branch); atualizar `.agents/CHECKPOINT.md` e `.agents/BACKLOG.md` (Status + Relatório).
 7. Opcional, só se a fonte bastar: `docs/case-estudo-autorizacao.md`, texto sanitizado "como a auditoria cruzada achou e corrigimos uma escalada de privilégio" (fontes: `~/Projetos/apps/Mishyo/security_report.md`, `LESSONS_LEARNED.md`). PROIBIDO incluir segredos, URLs/rotas internas, nomes de tabela/policy, trechos de SQL ou dados. Se não der para sanitizar com segurança, pule e registre no relatório. Linkar do README só se existir.
+
+8. **Visuais próprios (aprovados), gerados em Node no workflow e publicados na branch `output` junto dos cards**, em `scripts/visuals/` (um módulo por visual, `npm run visuals`). Reproduzir fielmente os protótipos: mesma paleta (terra `#F27321`, azul `#1A3D6E`, fundo escuro `#0D1117`), tema claro/escuro por `@media (prefers-color-scheme)` dentro do SVG, animação SMIL, texto real em PT e versão EN (`*.en.svg`), `role="img"` e `aria-label`. Sem `<script>`, sem link/imagem externa, sem fonte web (stack `'Segoe UI', system-ui, -apple-system, sans-serif`), até 40 KB cada.
+   - `header.svg`: nome, "Full-stack / Product Engineer", linha "Desenvolvimento assistido por IA, com gates, prova e auditoria.", três etiquetas (Mishyo, Painel J&JL, Instituto Jesus Lindão) e parede de tijolos animada.
+   - `gates.svg`: ciclo Gate 1 (Especificação, EARS) → Execução (IA em branch) → Gate 2 (Prova) → Auditoria (outra IA) → Gate 3 (Decisão humana) → Produção. Só afirmar o que o processo real faz.
+   - `tijolos.svg`: edifício de 320 tijolos (escola + hospital). Total de commits lido de `cards/data.json` (`totalCommits`), NUNCA fixo. 1 tijolo = 40 commits; se o total passar de 60% da silhueta (192 tijolos, ou seja 7.680 commits), dobrar a escala (80, 160...) para a obra seguir "em andamento". Legenda "Símbolo, não barra de progresso." SEM porcentagem em lugar nenhum.
+   - O README embute os três no topo (header), na seção "Como eu trabalho" (gates) e na seção do Instituto (tijolos), via `<img>` apontando para `output`.
+9. **Seção "Escrevo" (artigos e posts)** em PT e EN: `content.json` na raiz, `[{tipo:"artigo"|"post", titulo, url, data, idioma}]`, até 5 mais recentes, renderizada por `render-readme.mjs`. Só URLs `https` de `johnatamoreira.com.br` ou `linkedin.com/posts|pulse|feed/update`; qualquer outra URL faz `readme:check` sair 1. NUNCA listar rascunhos nem posts internos (ex.: "diretrizes internas" no blog). Se `content.json` estiver vazio, a seção não aparece (sem placeholder). O Johnata fornece os itens (ver Ações).
+10. Nada do que o blog tem hoje pode ser pressuposto: `johnatamoreira.com.br/blog` responde 308 e o blog (SITE-007) está em branch do repo do site, não mergeado. Os artigos entram por `content.json` até a Fase 2.
+
+## Fase 2 (NÃO executar agora; registrada como PERFIL-002, depende do Gate 2 desta tarefa e do merge do SITE-007 para o item a)
+a. **Artigos automáticos:** ler o RSS do blog (caminho a confirmar em `api/rss.ts` do repo do site) e preencher a seção "Escrevo"; se o feed não responder 200, manter `content.json` e seguir (nunca quebrar o workflow).
+b. **"Quando eu construo":** mapa de calor 7x24 dos horários de commit (America/Sao_Paulo), só contagens; sem mensagem de commit, sem nome de repo privado.
+c. **"Mishyo no ar":** check HTTP de `mishyo.com` no workflow, selo com status e data (UTC); falha vira "indisponível no último check" sem quebrar o job; sem número de usuários.
+d. **Auditoria cruzada (linha do tempo):** só após o case sanitizado do item 7 existir.
 
 ## Critérios (EARS)
 | # | Critério |
@@ -37,16 +52,24 @@ Perfil honesto e legível em 30 segundos por recrutador/fundador: "Full-stack / 
 | 7 | `README.md` e `README.en.md` DEVEM ter o mesmo conjunto de seções e os mesmos fatos. |
 | 8 | Nenhum número de usuários/famílias do Mishyo DEVE aparecer. |
 | 9 | Raiz do repo NÃO DEVE conter `makakoloko.webp` nem `cards/*.svg` rastreado; `git status` limpo no fim; `origin/main` intocada. |
+| 10 | `xmllint --noout` DEVE passar em todos os SVGs de visuais; cada um DEVE ter até 40 KB, conter `prefers-color-scheme`, e NÃO conter `<script`, `href=`, `xlink:href` nem `http` fora de `xmlns`. |
+| 11 | QUANDO `totalCommits` mudar em `cards/data.json` e `npm run visuals` rodar, O SISTEMA DEVE mudar o número e a quantidade de tijolos preenchidos em `tijolos.svg`; o SVG NÃO DEVE conter `%`. |
+| 12 | QUANDO `content.json` tiver URL fora dos domínios permitidos, `npm run readme:check` DEVE sair 1; QUANDO estiver vazio, a seção "Escrevo" NÃO DEVE aparecer. |
+| 13 | `README.md` e `README.en.md` DEVEM embutir header, gates e tijolos (versão do idioma) e a prova DEVE incluir o link do branch renderizado para o Johnata ver. |
 
 ## Armadilhas
 - As imagens do README apontam para `raw.githubusercontent.com/.../output/*.svg`: não renomear os arquivos de card sem atualizar os dois READMEs.
 - A branch `output` é recriada a cada run (keep_history false): nunca commitar nela à mão.
 - Rodar o gerador local exige `GH_TOKEN`; sem token, valide só o critério 4 (sem token) e peça ao Claude a execução com token no Gate 2.
 - Não inventar fato; lacuna = escrever sem o dado e listar no relatório.
+- Os SVGs são servidos pelo GitHub como imagem: sem JavaScript, links dentro do SVG não funcionam e fontes web não carregam. Não mudar a técnica (SMIL + CSS interno) sem testar no GitHub.
+- `output` é recriada a cada run: os visuais precisam ser gerados no mesmo workflow e publicados junto dos cards.
 
 ## Prova exigida (Gate 2)
-`git log --oneline origin/main..HEAD`, saída literal do grep (critério 1), saída de `readme:check` (ok e falha provocada), `git diff --stat origin/main`, `grep` dos SVGs (critério 5), lista dos SHAs fixados, `git status`, o que foi pulado e por quê.
+`git log --oneline origin/main..HEAD`, saída literal do grep (critério 1), saída de `readme:check` (ok e falha provocada), `git diff --stat origin/main`, `grep` dos SVGs (critério 5), lista dos SHAs fixados, `git status`, saída de `xmllint` e tamanhos dos SVGs (critério 10), teste do critério 11 (antes e depois), o que foi pulado e por quê.
 
 ## Ações do JOHNATA (o executor não faz)
 - Conferir que `CARDS_TOKEN` é fine-grained, só leitura (Contents + Metadata), com validade; se for classic com escopo `repo`, trocar.
 - Gate 3: ler os dois READMEs renderizados na branch antes do merge.
+- Fornecer a lista inicial de `content.json`: título, URL e data dos artigos/posts que quer exibir (inclui o primeiro post do LinkedIn de 09/11). Sem a lista, a seção "Escrevo" fica de fora na primeira entrega.
+- Aprovar o cabeçalho e os 3 visuais já foi feito em 12/11; no Gate 3, conferir a renderização final no branch (desktop e celular, claro e escuro).
