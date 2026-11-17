@@ -1,0 +1,22 @@
+[
+  {
+    "id": "mishyo",
+    "nome": "Mishyo",
+    "status": "Em lançamento",
+    "url": "https://mishyo.com",
+    "resumo_pt": "Aplicativo para famílias preservarem fotos, vídeos, histórias e a linha do tempo da vida juntos.",
+    "resumo_en": "An app for families to preserve photos, videos, stories and their shared timeline.",
+    "stack": ["TypeScript", "Next.js", "Supabase", "Tailwind", "Playwright"],
+    "destaque": true
+  },
+  {
+    "id": "painel-jjl",
+    "nome": "Painel J&JL",
+    "status": "Em produção",
+    "url": "https://painel.grupojjl.com.br",
+    "resumo_pt": "Painel para gestão de tráfego, leads e resultados de campanhas para corretores.",
+    "resumo_en": "A dashboard for traffic management, leads and campaign results for real-estate agents.",
+    "stack": ["TypeScript", "Next.js", "Supabase", "Tailwind"],
+    "destaque": false
+  }
+]
