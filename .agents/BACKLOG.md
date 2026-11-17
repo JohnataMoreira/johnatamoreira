@@ -8,7 +8,7 @@
 
 ## PERFIL-001 — Reposicionar README do perfil (PT+EN), projects.json e cards proprios
 
-**Status:** PENDENTE
+**Status:** CONCLUÍDA — merge na main em 17/11/2026 (Gate 3 com OK do Johnata no chat); mover para historico na próxima rotação
 **Max iterações:** 3
 **Adicionada:** 2026-11-09 (via qg-comando)
 
@@ -40,13 +40,17 @@ Despacho completo em .agents/propostas/G1_PERFIL-001.md (worktree ../perfil-gith
 | # | Tipo | Critério |
 |---|------|----------|
 | 1 | Resultado | QUANDO o grep de termos proibidos (CNPJ, numeros antigos, projetos removidos, Docker/n8n/React Native, servicos de terceiros) rodar nos READMEs, projects.json, scripts e workflow, O SISTEMA DEVE retornar 0 linhas |
-| 2 | Resultado | TODO link de WhatsApp DEVE ser https://wa.me/5531975693311 |
+| 2 | Resultado | TODO link de WhatsApp DEVE ser https://wa.me/5531920060816 |
 | 3 | Resultado | npm run readme:check DEVE sair 0 apos npm run readme e sair 1 se projects.json mudar sem regenerar |
 | 4 | Resultado | SEM GH_TOKEN, generate-cards.mjs DEVE sair 1 sem criar SVG parcial |
 | 5 | Resultado | Os SVGs NAO DEVEM conter nome de repo privado nem projetos removidos |
 | 6 | Resultado | TODAS as uses do workflow DEVEM ter SHA de 40 caracteres |
 | 7 | Resultado | README.md e README.en.md DEVEM ter as mesmas secoes e fatos; nenhum numero de usuarios do Mishyo |
 | 8 | Resultado | git status limpo; makakoloko.webp fora da raiz; origin/main intocada |
+
+### Atualização T033 v2.1
+- Delta aplicado: WhatsApp `5531920060816`; 16 redes oficiais em PT e EN; `readme:check` valida todas as URLs.
+- A prova autenticada do gerador de cards permanece pendente do Gate 2 do Claude, pois nenhum token foi lido ou criado.
 
 ### Armadilhas conhecidas
 - (nenhum)

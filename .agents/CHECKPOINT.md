@@ -1,29 +1,17 @@
-# CHECKPOINT — perfil-github (README do perfil JohnataMoreira + gerador de cards)
-> Atualizado: 09/11/2026 (Claude, Desktop). Teto ~200 linhas.
+# CHECKPOINT — perfil-github (README do perfil JohnataMoreira)
+> Atualizado: 17/11/2026 (Claude, Desktop). Teto ~200 linhas.
 ## Estado
-- main: hotfix `44664fe` (WhatsApp 5531975693311 correto; CNPJ removido do README). Resto do README/cards/workflow ainda no formato antigo (FrotaOS, Docker, n8n, serviços de terceiros).
-- PERFIL-001 (Gate 1 despachado, **AGUARDANDO o Johnata acionar o Antigravity**): `.agents/propostas/G1_PERFIL-001.md`, branch `feat/reposicionamento-readme`, worktree `../perfil-github-reposicionamento`. Regista README PT+EN, `projects.json`, cards próprios, actions por SHA.
-- Contexto/decisões: `~/Projetos/QG/docs/historico/SESSAO_2026-11-06_reposicionamento_github_e_site.md`.
-## Pendências do Johnata
-- Acionar o Antigravity; conferir que `CARDS_TOKEN` é fine-grained (Contents + Metadata, só leitura, com validade); Gate 3 lendo os READMEs renderizados.
-## Pós-merge (Claude)
-- `gh repo edit` (description, topics, homepage); remover `.webp` solto; repo-vitrine público só com gitleaks + licença restritiva (tarefa futura).
-
-## Atualizacao 12/11/2026 (sessao Estrategista)
-- **Token:** `CARDS_TOKEN` agora e fine-grained (Contents+Metadata, leitura, 90 dias, vence ~10/02/2027). Workflow verde em 12/11. Classic `Antigravity`, PAT `n8n` e app Dokploy removidos pelo Johnata. Pendente: substituir classic `antigravity-ide` e `claude-desktop` por tokens minimos com validade.
-- **Visual aprovado pelo Johnata e validado no GitHub (desktop e celular):** ciclo de gates animado, tijolos do Instituto (1 tijolo = 40 commits, sem % de progresso, legenda "simbolo"), cabecalho com tijolos. Prototipos no branch `feat/reposicionamento-readme` (`assets/prototipos/`, `PROTOTIPO.md`), gerados por `/tmp/proto/*.py` (descartavel; o PERFIL-001 reescreve em Node).
-- **Dado desatualizado:** README publico diz "1.800+ commits"; real = 6.471 (run de 12/11). O gerador deve ler o total, nunca fixar.
-- **Proximo:** Johnata avalia o cabecalho; depois revisar G1_PERFIL-001 incluindo esses 3 visuais e despachar ao Antigravity. Ideias de 2a fase: auditoria cruzada (timeline), quando eu construo (horas dos commits), Mishyo no ar, ultimos artigos.
-
-## Despacho 12/11/2026 (Antigravity indisponivel)
-- PERFIL-001 v2 despachada ao **Manus** como **T030** (`qg-manus-bridge/inbox/2026-11-12-T030-...md`, com adaptacoes: sem worktree, item 7 pulado, sem token, stack so do Mishyo). Manus SP v1.8 ganhou a frente 5 (Codigo). Gate 2 e merge sao do Claude; `CARDS_TOKEN` roda no Gate 2.
-- **T031** (Manus, read-only): auditoria do site, Search Console e consistencia entre canais.
-- Pendente do Johnata: colar o SP v1.8 no projeto do Manus e autorizar so o repo `johnatamoreira` no conector GitHub dela.
-- Primeiro artigo: terca 17/11. `content.json` nasce vazio (secao "Escrevo" oculta ate la).
-- Site no ar ainda e o antigo (SITE-006 commitada em branch LOCAL cad9e1a, nao enviada ao remoto; SITE-007/008 em `exec/antigravity-site-blog-01`, baseada na main antiga). /blog e /sitemap.xml = 404.
-
-## Atualizacao 12/11/2026 (noite)
-- **G1_PERFIL-001 v2.1:** telefone e WhatsApp unicos +55 31 92006-0816 (`wa.me/5531920060816`); 16 redes oficiais (7 pessoais, 5 Mishyo, 4 ViceRadar) no README PT e EN (criterio 14). T030 no `qg-manus-bridge/inbox/` tem passo 0 (teste de acesso ao GitHub pelo Composio).
-- **Manus SP v1.9** (13/11): Manus em par com Antigravity e Codex em codigo; Composio e o unico canal de conectores.
-- **Site novo** (SITE-009/T032) tem a mesma identidade visual; reusar header, gates e tijolos como SVGs compartilhados quando o site tiver a home nova.
-- Pendente: Johnata aciona o Manus (T030); Gate 2 do Claude com o `CARDS_TOKEN`; `content.json` entra com o 1o artigo (terca 17/11).
+- **PERFIL-001 MERGEADA na `main` em 17/11/2026** (merge `--no-ff` de `feat/reposicionamento-readme`; Gate 2 aprovado em 13/11, OK do Johnata no chat para o merge em 17/11).
+- README PT/EN reposicionados, `projects.json`, `content.json`, geradores próprios (`scripts/`), seis SVGs próprios (header, gates, tijolos e cards) e workflow com actions fixadas por SHA.
+- WhatsApp e telefone únicos: +55 31 92006-0816 (`wa.me/5531920060816`). CNPJ não aparece.
+- O push na `main` (README) dispara o workflow "Gerar Perfil", que republica a branch `output` usada pelas imagens do README.
+## Provas
+- `npm run readme` e `npm run readme:check`: verdes. Run autenticado `43485358251` (commit `b54bec5`): `success`.
+- Conferência de 17/11 antes do merge: nenhum termo proibido nos READMEs (grep do critério 1); único link de WhatsApp = `wa.me/5531920060816`.
+## Pendências
+- Johnata: olhar o perfil renderizado (desktop e celular, claro e escuro) e dizer se algo desagrada.
+- Pós-merge (Claude, com OK do Johnata por falar em nome dele): descrição, tópicos e homepage do repo do perfil; remover artefato solto remanescente.
+- `content.json` ainda sem artigos: o 1º artigo foi postado e o 2º saiu em 17/11; entram quando as URLs forem confirmadas.
+- PERFIL-002 (fase 2: artigos por RSS, "quando eu construo", "Mishyo no ar") depende de o blog do site estar no ar.
+## Contexto
+- Decisões e histórico: `~/Projetos/QG/docs/historico/SESSAO_2026-11-06_reposicionamento_github_e_site.md` e `HANDOFF_2026-11-17_continuacao.md`.
