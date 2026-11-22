@@ -1,0 +1,79 @@
+#!/usr/bin/env bash
+# Pre-commit doc-guard & security — CANÔNICO (fonte única: QG/docs/templates/pre-commit).
+# NÃO editar por repo: edite a FONTE e redistribua (cp + chmod +x) a cada .githooks/pre-commit.
+# Padrão: QG/docs/PROTOCOLO_DOCUMENTACAO.md (§ TETOS E ROTAÇÃO) + DOC_MAP.md do repo.
+# Ative por clone: git config core.hooksPath .githooks
+# Impede segredos (gitleaks) e duplicata de doc canônico (doc-guard). PROIBIDO --no-verify.
+# Especificidades do repo (ex.: Mishyo/security-audit) entram ANTES do bloco marcado abaixo.
+set -euo pipefail
+
+# >>> GUARD DE SEGREDOS (GITLEAKS) >>>
+echo "🔒  pre-commit: gitleaks (verificando segredos em staged)…"
+if command -v gitleaks >/dev/null 2>&1; then
+  if ! gitleaks protect --staged -v --redact; then
+    echo "❌ pre-commit: segredo detectado pelo gitleaks. Remova antes de commitar."
+    exit 1
+  fi
+else
+  echo "⚠️  pre-commit: gitleaks não instalado no PATH. Instale com 'brew install gitleaks'."
+fi
+# <<< FIM GUARD DE SEGREDOS <<<
+
+BLOCK=0
+
+
+# >>> DOC-GUARD CANÔNICO — não editar por repo >>>
+echo "🛡️  pre-commit: doc-guard (DOC_MAP)…"
+# Ignora caminhos que NÃO guardam docs canônicos vivos (templates/exemplos/vendor/histórico/build).
+IGNRE='(^|/)(templates|node_modules|vendor|dist|build|\.next)/|/historico/'
+tracked="$(git ls-files | grep -Ev "$IGNRE" || true)"
+
+# sync: DOC_MAP.md — basenames de INSTÂNCIA ÚNICA (exatamente 1 cópia, em qualquer caminho).
+# CHECKPOINT.md NÃO entra aqui: padrão de DOIS arquivos (dono .agents/ + stub raiz) — regra própria abaixo.
+RESERVED="ESTADO_ATUAL.md AGENT_OS.md LESSONS_LEARNED.md DECISOES_ARQUITETURAIS.md HISTORICO_DE_DESENVOLVIMENTO.md CHANGELOG.md DOC_MAP.md BACKLOG.md CONTRATOS.md PRD.md"
+
+# BARRA: nome canônico ADICIONADO que já tem outra cópia rastreada (drift real).
+staged_added="$(git diff --cached --name-status --diff-filter=A | awk '{print $2}' | grep -Ev "$IGNRE" || true)"
+for f in $staged_added; do
+  base="$(basename "$f")"
+  case " $RESERVED " in
+    *" $base "*)
+      others="$(printf '%s\n' "$tracked" | awk -F/ -v b="$base" '$NF==b{print}' | grep -vx "$f" || true)"
+      if [ -n "$others" ]; then
+        echo "❌ doc-guard: '$f' duplica doc canônico '$base' (já existe). Ver DOC_MAP.md."
+        BLOCK=1
+      fi ;;
+  esac
+done
+
+# CHECKPOINT.md — regra própria: padrão de DOIS arquivos sancionado pelo DOC_MAP.
+#   dono = .agents/CHECKPOINT.md ; stub-ponteiro = CHECKPOINT.md (raiz, compat qg_checkpoint_read).
+# Bloqueia CHECKPOINT.md em QUALQUER outro caminho (git garante no máx. 1 por caminho).
+cp_bad="$(printf '%s\n' "$tracked" | awk -F/ '$NF=="CHECKPOINT.md"{print}' | grep -vx 'CHECKPOINT.md' | grep -vx '.agents/CHECKPOINT.md' || true)"
+if [ -n "$cp_bad" ]; then
+  echo "❌ doc-guard: CHECKPOINT.md fora do padrão (dono '.agents/CHECKPOINT.md' + stub raiz):"
+  printf '   %s\n' $cp_bad
+  BLOCK=1
+fi
+
+# AVISA: duplicatas já rastreadas de um basename reservado (dívida a consolidar).
+for base in $RESERVED; do
+  n="$(printf '%s\n' "$tracked" | awk -F/ -v b="$base" '$NF==b{c++} END{print c+0}')"
+  if [ "$n" -gt 1 ]; then
+    echo "⚠️  doc-guard: $n cópias de '$base' — consolidar (ver DOC_MAP.md)."
+  fi
+done
+
+# AVISA: código staged sem CHANGELOG tocado.
+staged_code="$(git diff --cached --name-only --diff-filter=ACM | grep -E '\.(ts|tsx|js|jsx|dart|sql)$' || true)"
+staged_cl="$(git diff --cached --name-only | grep -x 'CHANGELOG.md' || true)"
+if [ -n "$staged_code" ] && [ -z "$staged_cl" ]; then
+  echo "⚠️  doc-guard: código staged mas CHANGELOG.md não tocado. Registrou a mudança?"
+fi
+# <<< fim DOC-GUARD CANÔNICO <<<
+
+if [ "$BLOCK" -ne 0 ]; then
+  echo "🛑 pre-commit: BLOQUEADO. Corrija antes de prosseguir (NÃO use --no-verify)."
+  exit 1
+fi
+echo "🛡️  pre-commit: ok"

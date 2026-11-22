@@ -1,0 +1,32 @@
+#!/usr/bin/env bash
+# Pre-push — Proteção de branch main/master contra force-push, reescrita e deleção.
+# CANÔNICO (fonte única: QG/docs/templates/pre-push).
+# Ativado por: git config core.hooksPath .githooks
+# DA-2026-11-22-d: sem GitHub Pro, a proteção de branch vira técnica local e grátis.
+# Push fast-forward normal em main/master é permitido para Claude, Codex e Antigravity.
+# Force-push (--force, --force-with-lease) e push não fast-forward em main/master são estritamente bloqueados.
+set -euo pipefail
+
+zero="0000000000000000000000000000000000000000"
+
+while read -r local_ref local_sha remote_ref remote_sha; do
+  case "$remote_ref" in
+    refs/heads/main|refs/heads/master)
+      # 1. Proibir deleção de branch protegida
+      if [ "$local_sha" = "$zero" ] || [ -z "$local_sha" ]; then
+        echo "❌ [pre-push] Bloqueado: Proibido deletar branch protegida ($remote_ref)."
+        exit 1
+      fi
+
+      # 2. Se o remote já possui commits, exigir que o push seja estritamente fast-forward
+      if [ "$remote_sha" != "$zero" ] && [ -n "$remote_sha" ]; then
+        if ! git merge-base --is-ancestor "$remote_sha" "$local_sha" 2>/dev/null; then
+          echo "❌ [pre-push] Bloqueado: Force-push ou push não fast-forward proibido em $remote_ref."
+          exit 1
+        fi
+      fi
+      ;;
+  esac
+done
+
+exit 0

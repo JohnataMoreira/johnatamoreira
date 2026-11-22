@@ -1,0 +1,29 @@
+title = "Gitleaks Config — J&JL Tecnologia"
+
+[extend]
+useDefault = true
+
+[allowlist]
+description = "Permitir placeholders de .env.example, .env.template e chaves dummy de teste"
+regexes = [
+  '''sb_publishable_dummy_key_for_ci_build''',
+  '''dummy-key-for-build''',
+  '''dummy-anon-key''',
+  '''dummy_anon_key''',
+  '''dummy-service-role-key''',
+  '''re_test_12345''',
+  '''teste50''',
+  '''senha-forte-123''',
+]
+paths = [
+  '''(?i)\.env\.example$''',
+  '''(?i)\.env\.template$''',
+  '''(?i)\.env\.sample$''',
+  '''(^|/)node_modules/''',
+  '''(^|/)\.worktrees/''',
+  '''(^|/)\.next/''',
+  '''(^|/)dist/''',
+  '''(^|/)build/''',
+  '''package-lock\.json$''',
+  '''pnpm-lock\.yaml$''',
+]
